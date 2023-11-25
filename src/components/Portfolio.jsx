@@ -28,7 +28,7 @@ const Portfolio = () => {
     >
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-purple-700'>Porfolio</p>
+                <p className='text-4xl font-bold inline border-b-4 border-purple-700 '>Porfolio</p>
                 <p className='py-6'>Look at my projects! They are made with a lot of love.</p>
             </div>
 

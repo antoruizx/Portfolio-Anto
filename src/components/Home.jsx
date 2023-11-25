@@ -1,5 +1,5 @@
 import React from 'react';
-import AntoImage from '../assets/img/anto-2.jpg';
+import AntoImage from '../assets/img/anto-neon.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-scroll';
 
