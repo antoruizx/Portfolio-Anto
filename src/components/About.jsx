@@ -14,14 +14,13 @@ const About = () => {
                 </div>
 
                 <p className='text-xl mt-20'>
-                I have always had an interest in technological advancement, I long to be able to improve people's quality of life and raise awareness in the world. I am proactive and committed to my goals and objectives, at the same time, I have an objective and analytical vision when looking for solutions and contributing ideas.
-                </p>
+
+                My dream goes beyond innovation for its own sake. It is the fervent desire to use technology as a force for good, to transform lives and create a positive impact on the world. My approach is not just limited to tangible results, but extends to emotional and mental responsibility.                </p>
 
                 <br />
                 
                 <p className='text-xl'>
-                    // i love read... hobbies in gral.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa quam magni id eum, minima, ratione repellat ab accusamus dolorem vitae repellendus nemo inventore quia tempora at quidem repudiandae obcaecati.
+                I like to listen to music, my favorite genres are trap, pop and national rock. Sometimes I go trekking on trails because that way I can connect more with nature. I am a vegetarian, I love cooking, I feel like it is my ground wire and it always makes me happy to be able to discover and make a new dish. Current book: the power of now.
                 </p>
             </div>
         </div>

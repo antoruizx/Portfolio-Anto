@@ -12,8 +12,8 @@ const Home = () => {
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center h-full'>
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm FullStack Developer</h2>
-                <p className='text-gray-500 py-4 max-w-md'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores magnam sapiente assumenda sit consequatur iure nobis incidunt aperiam, architecto facere tempore iste corrupti dolorum, officiis nam earum sunt perferendis.
+                <p className='text-white py-4 max-w-md'>
+                Hello! I am Nadia Antonella Ruiz, I live in Tucumán, Argentina. Worked on projects using technologies such as React, Express.js, MongoDB, and more. My approach is to create solutions that are both functional and aesthetically appealing.
                 </p>
                 <div>
                     <Link 
