@@ -1,6 +1,7 @@
 import React from 'react';
 import Calcu from '../assets/img/calcu.png';
 import Piaceres from '../assets/img/piaceres.png';
+import Reed from '../assets/img/capturareed.png';
 
 
 const Portfolio = () => {
@@ -8,15 +9,15 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: Calcu,
+            src: Reed,
         },
         {
             id: 2,
-            src: Piaceres,
+            src: Reed,
         },
         {
             id: 3,
-            src: Calcu,
+            src: Reed,
         },
     ];
 
@@ -40,8 +41,8 @@ const Portfolio = () => {
                 className='rounded-md duration-200 hover:scale-105'
                 />
                 <div className='flex items-center justify-center'>
-                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                    <a href='https://reed-project-gilt.vercel.app/' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</a>
+                    <a href='https://github.com/antoruizx/Reed-Page' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</a>
                 </div>
             </div>
             ))}
