@@ -10,6 +10,7 @@ function App() {
       <NavBar />
       <Home />
       <About />
+      <Portfolio />
     </div>
   );
 }
