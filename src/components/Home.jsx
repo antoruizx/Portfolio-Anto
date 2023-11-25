@@ -1,5 +1,5 @@
 import React from 'react';
-import AntoImage from '../assets/img/anto22.png';
+import AntoImage from '../assets/img/anto-2.jpg';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
     >
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center h-full'>
-                <h2 className='text-4xl sm:text-6xl font-bold text-white'>I'm FullStack Developer</h2>
+                <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm FullStack Developer</h2>
                 <p className='text-gray-500 py-4 max-w-md'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores magnam sapiente assumenda sit consequatur iure nobis incidunt aperiam, architecto facere tempore iste corrupti dolorum, officiis nam earum sunt perferendis.
                 </p>
