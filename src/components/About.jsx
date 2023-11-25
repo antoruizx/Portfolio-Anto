@@ -15,7 +15,8 @@ const About = () => {
 
                 <p className='text-xl mt-20'>
 
-                My dream goes beyond innovation for its own sake. It is the fervent desire to use technology as a force for good, to transform lives and create a positive impact on the world. My approach is not just limited to tangible results, but extends to emotional and mental responsibility.                </p>
+                My dream goes beyond innovation for its own sake. It is the desire to use technology as a force for good, to transform lives and create a positive impact on the world. My approach is not just limited to tangible results, but extends to emotional and mental responsibility.              
+                </p>
 
                 <br />
                 
