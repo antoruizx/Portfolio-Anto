@@ -40,7 +40,7 @@ export default function Footer() {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'black' }}>
-        © 2020 Copyright | Nadia Antonella Ruiz
+        © 2023 Copyright | Nadia Antonella Ruiz
         <a className='text-white'>
         
         </a>
