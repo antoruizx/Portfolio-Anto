@@ -1,7 +1,8 @@
 import React from 'react';
 import AntoImage from '../assets/img/anto-neon.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import { Link } from 'react-scroll';
+import { Link, ScrollLink } from 'react-scroll';
+import pdf from '../assets/docs/cv-developer-nar.pdf';
 
 const Home = () => {
   return (
@@ -16,15 +17,13 @@ const Home = () => {
                 Hello! I am Nadia Antonella Ruiz, I live in Tucumán, Argentina. Worked on projects using technologies such as React, Express.js, MongoDB, and more. My approach is to create solutions that are both functional and aesthetically appealing.
                 </p>
                 <div>
-                    <Link 
-                    to='portfolio' 
+                    <a 
+                    href='https://drive.google.com/uc?id=1HS64IC5h61iniTJedcjz-S6LAkQajpm9&export=download'
                     smooth duration={500} 
-                    className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-600 to-purple-900 hover:scale-110 duration-300'>
-                        Projects
-                        <span className='group-hover:rotate-90 duration-300'>
-                            <MdOutlineKeyboardArrowRight size={25} className='ml-1'/>
-                        </span>
-                    </Link>
+                    className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-600 to-purple-900 hover:scale-110 duration-300 font-bold cursor-pointer'>
+                    Download CV
+                    </a>
+
                 </div>
             </div>
 

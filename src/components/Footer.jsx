@@ -11,33 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className='bg-dark text-center text-white ' style={{ backgroundColor: 'black' }}>
-      <MDBContainer className='p-4 pb-0'>
-        <section className='mb-4'>
-          <MDBBtn outline color="dark" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='facebook-f' />
-          </MDBBtn>
-
-          <MDBBtn outline color="dark" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='twitter' />
-          </MDBBtn>
-
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='google' />
-          </MDBBtn>
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='instagram' />
-          </MDBBtn>
-
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='linkedin-in' />
-          </MDBBtn>
-
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='github' />
-          </MDBBtn>
-        </section>
-      </MDBContainer>
+    <MDBFooter className='bg-dark font-bold text-center text-white ' style={{ backgroundColor: 'black' }}>
 
       <div className='text-center p-3' style={{ backgroundColor: 'black' }}>
         © 2023 Copyright | Nadia Antonella Ruiz
