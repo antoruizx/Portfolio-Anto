@@ -5,6 +5,10 @@ import css from "../assets/img/icons skills/css-3.png";
 import bootstrap from "../assets/img/icons skills/bootstrap-5-1.svg";
 import javascript from "../assets/img/icons skills/archivo-js.png";
 import mongodb from "../assets/img/icons skills/mongodb-icon-1.svg";
+import tailwind from "../assets/img/icons skills/carpeta.png";
+import github from "../assets/img/icons skills/github.png";
+import nodeJs from "../assets/img/icons skills/nodejs-horizontal.svg";
+import Postman from "../assets/img/icons skills/postman-icon.svg";
 
 const Experience = () => {
 
@@ -45,6 +49,30 @@ const Experience = () => {
             title: 'MongoDB',
             style: 'shadow-green-500'
         },
+        {
+            id: 7,
+            src: tailwind,
+            title: 'Tailwind',
+            style: 'shadow-purple-400'
+        },
+        {
+            id: 8,
+            src: github,
+            title: 'Github',
+            style: 'shadow-purple-600'
+        },
+        {
+            id: 9,
+            src: nodeJs,
+            title: 'Node JS',
+            style: 'shadow-purple-600'
+        },
+        {
+            id: 10,
+            src: Postman,
+            title: 'Postman',
+            style: 'shadow-purple-600'
+        },
     ];
 
   return (
@@ -58,7 +86,7 @@ const Experience = () => {
                 <p className='py-6'>These are the technologies I have worked with.</p>
             </div>
 
-            <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
+            <div className='mb-40 w-full grid grid-cols-2 sm:grid-cols-5 gap-8 text-center py-8 px-12 sm:px-0'>
 
             {techs.map(({ id, src, title, style }) => (
                 <div 

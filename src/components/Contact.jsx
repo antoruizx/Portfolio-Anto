@@ -20,12 +20,14 @@ const Contact = () => {
                     placeholder='Enter your name'
                     className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
                     />
+                    <br />
                     <input 
                     type='text' 
                     name='email'
                     placeholder='Enter your email'
                     className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
                     />
+                    <br />
                     <textarea 
                     name='message' 
                     placeholder='Enter your message'
@@ -34,8 +36,9 @@ const Contact = () => {
                     ></textarea>
                     <button className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Send</button>
                 </form>
-            </div>
 
+            </div>
+            <br />
         </div>
     </div>
   );
