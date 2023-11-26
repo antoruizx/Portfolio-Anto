@@ -33,7 +33,7 @@ const Portfolio = () => {
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-            {portfolios.map(({ id, src }) => (
+            {portfolios.map(({ id, src, title }) => (
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                 <img 
                 src={src} 
@@ -41,8 +41,8 @@ const Portfolio = () => {
                 className='rounded-md duration-200 hover:scale-105'
                 />
                 <div className='flex items-center justify-center'>
-                    <a href='https://reed-project-gilt.vercel.app/' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</a>
-                    <a href='https://github.com/antoruizx/Reed-Page' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</a>
+                    <a href='https://reed-project-gilt.vercel.app/' className='w-1/2 px-12 py-2 m-2 font-bold duration-200 hover:scale-105'>Reed</a>
+
                 </div>
             </div>
             ))}
