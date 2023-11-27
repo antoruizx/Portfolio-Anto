@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/img/logonar1.png';
 import { Link } from 'react-scroll';
+import "../styles/Navbar.css";
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -40,13 +41,14 @@ const NavBar = () => {
                 </h1>
             </div>
 
-            <ul className='hidden md:flex'>
+            <ul id='body' className='hidden md:flex'>
                 {links.map(({ id, link }) => (
                     <li
+                        id='nav'
                         key={id}
-                        className='px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200'
+                        className='px-4 cursor-pointer capitalize font-medium text-white duration-200'
                     >
-                        <Link to={link} smooth duration={500}>{link}
+                        <Link to={link} smooth duration={500}><span>{link}</span>
                         </Link>
                     </li>
                 ))}

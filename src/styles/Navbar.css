@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+} 
+
+#body {
+    display: flex;
+}
+
+#nav a {
+    padding: 6px 20px;
+}
+
+
+#nav a span {
+ 
+
+
+}
+
+#nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    border-bottom: 2px solid rgb(126 34 206);
+    transform: scale(1) translateY(50px);
+    background-size: 100% 2px;
+}
