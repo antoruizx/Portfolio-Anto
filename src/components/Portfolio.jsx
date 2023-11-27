@@ -2,6 +2,7 @@ import React from 'react';
 import Calcu from '../assets/img/calcu.png';
 import Piaceres from '../assets/img/piaceres.png';
 import Reed from '../assets/img/capturareed.png';
+import '../styles/Portfolio.css';
 
 
 const Portfolio = () => {
@@ -27,7 +28,7 @@ const Portfolio = () => {
         className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'
     >
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-            <div className='pb-8'>
+            <div id='portfolio-container' className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-purple-700 '>Porfolio</p>
                 <p className='py-6'>Look at my projects! They are made with a lot of love.</p>
             </div>
