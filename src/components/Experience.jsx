@@ -1,13 +1,13 @@
 import React from 'react';
-import reactIcon from "../assets/img/icons skills/react-2.svg";
+import reactIcon from "../assets/img/icons skills/react.png";
 import html from "../assets/img/icons skills/html-5.png";
 import css from "../assets/img/icons skills/css-3.png";
-import bootstrap from "../assets/img/icons skills/bootstrap-5-1.svg";
+import bootstrap from "../assets/img/icons skills/bootstrap.png";
 import javascript from "../assets/img/icons skills/archivo-js.png";
 import mongodb from "../assets/img/icons skills/mongodb-icon-1.svg";
-import tailwind from "../assets/img/icons skills/carpeta.png";
+import tailwind from "../assets/img/icons skills/tailwind.png";
 import github from "../assets/img/icons skills/github.png";
-import nodeJs from "../assets/img/icons skills/nodejs-horizontal.svg";
+import nodeJs from "../assets/img/icons skills/nodejs.png";
 import Postman from "../assets/img/icons skills/postman-icon.svg";
 
 const Experience = () => {
@@ -65,13 +65,13 @@ const Experience = () => {
             id: 9,
             src: nodeJs,
             title: 'Node JS',
-            style: 'shadow-purple-600'
+            style: 'shadow-green-600'
         },
         {
             id: 10,
             src: Postman,
             title: 'Postman',
-            style: 'shadow-purple-600'
+            style: 'shadow-orange-600'
         },
     ];
 
