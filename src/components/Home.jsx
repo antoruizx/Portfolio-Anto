@@ -3,6 +3,8 @@ import AntoImage from '../assets/img/anto-neon.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link, ScrollLink } from 'react-scroll';
 import pdf from '../assets/docs/cv-developer-nar.pdf';
+import LanguageButton from './LanguageButton';
+
 
 const Home = () => {
   return (
@@ -34,6 +36,7 @@ const Home = () => {
                 className='rounded-2xl mx-auto w-2/3 md:w-full'
                 />
             </div>
+            <LanguageButton />
         </div>
     </div>
   );

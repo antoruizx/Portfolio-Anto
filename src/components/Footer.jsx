@@ -14,7 +14,7 @@ export default function Footer() {
     <MDBFooter className='bg-dark font-bold text-center text-white ' style={{ backgroundColor: 'black' }}>
 
       <div className='text-center p-3' style={{ backgroundColor: 'black' }}>
-        © 2023 Copyright | Nadia Antonella Ruiz
+        © 2023 Copyright | Portfolio de Nadia Antonella Ruiz
         <a className='text-white'>
         
         </a>
