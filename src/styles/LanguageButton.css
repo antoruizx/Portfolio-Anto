@@ -1,11 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.padre{
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: 0 10px;
+    text-align: justify;
+}
+.container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: inline-block;
+}
+
+
 .en {
-    color: black;
-    padding-left: 8px;
+    border-radius: 50%;
+
 }
 
 .es {
-    color: black;
-    padding-right: 8px;
+    border-radius: 50%;
+
 }
 .check{
     position: relative;
