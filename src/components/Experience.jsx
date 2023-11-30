@@ -10,8 +10,11 @@ import github from "../assets/img/icons skills/github.png";
 import nodeJs from "../assets/img/icons skills/nodejs.png";
 import Postman from "../assets/img/icons skills/postman-icon.svg";
 import '../styles/Experience.css';
+import { useTranslation } from 'react-i18next';
+
 
 const Experience = () => {
+    const [t, i18n] = useTranslation("global");
 
     const techs = [
         {
@@ -83,8 +86,8 @@ const Experience = () => {
     >
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
             <div id='experience-container'>
-                <p  className='text-4xl font-bold inline border-b-4 border-purple-700 '>Experience</p>
-                <p className='py-6'>These are the technologies I have worked with.</p>
+                <p  className='text-4xl font-bold inline border-b-4 border-purple-700 '>{t("experience.title")}</p>
+                <p className='py-6'>{t("experience.body")}</p>
             </div>
 
             <div className='mb-40 w-full grid grid-cols-2 sm:grid-cols-5 gap-8 text-center py-8 px-12 sm:px-0'>

@@ -1,11 +1,11 @@
 import React from 'react';
-import Calcu from '../assets/img/calcu.png';
-import Piaceres from '../assets/img/piaceres.png';
 import Reed from '../assets/img/capturareed.png';
 import '../styles/Portfolio.css';
+import { useTranslation } from 'react-i18next';
 
 
 const Portfolio = () => {
+    const [t, i18n] = useTranslation("global");
 
     const portfolios = [
         {
@@ -29,8 +29,8 @@ const Portfolio = () => {
     >
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div id='portfolio-container' className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-purple-700 '>Porfolio</p>
-                <p className='py-6'>Look at my projects! They are made with a lot of love.</p>
+                <p className='text-4xl font-bold inline border-b-4 border-purple-700 '>{t("portfolio.title")}</p>
+                <p className='py-6'>{t("portfolio.body")}</p>
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mb-40'>

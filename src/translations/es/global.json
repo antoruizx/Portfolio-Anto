@@ -1,5 +1,28 @@
 {
-    "header": {
-        "hello-world": "Hola Mundo"
+    "home": {
+        "title": "Soy programadora Fullstack",
+        "body": "Hola! Soy Nadia Antonella Ruiz, vivo en Tucumán, Argentina. Trabajó en proyectos utilizando tecnologías como React, Express.js, MongoDB y más. Mi enfoque es crear soluciones que sean a la vez funcionales y estéticamente atractivas.",
+        "cv": "Descargar CV"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "body": "Mi sueño va más allá de la innovación por sí misma. Es el deseo de utilizar la tecnología como una fuerza para el bien, para transformar vidas y crear un impacto positivo en el mundo. Mi enfoque no se limita sólo a resultados tangibles, sino que se extiende a la responsabilidad emocional y mental."
+    },
+    "portfolio": {
+        "title": "Portafolio",
+        "body": "¡Mirá mis proyectos! Están hechos con mucho amor."
+    },
+    "experience": {
+        "title": "Experiencia",
+        "body": "Estas son las tecnologías con las que trabajé."
+    },
+    "contact": {
+        "title": "Contacto",
+        "body": "Si estás interesado en trabajar conmigo. ¡Escríbeme!",
+        "name-placeholder": "Ingrese su nombre",
+        "email-placeholder": "Ingrese su email",
+        "message-placeholder": "Ingrese su mensaje",
+        "send": "Enviar"
     }
+    
 }
