@@ -30,7 +30,7 @@ const Portfolio = () => {
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div id='portfolio-container' className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-purple-700 '>{t("portfolio.title")}</p>
-                <p className='py-6'>{t("portfolio.body")}</p>
+                <p className='py-6 mb-10'>{t("portfolio.body")}</p>
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mb-40'>

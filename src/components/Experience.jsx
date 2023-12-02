@@ -87,7 +87,7 @@ const Experience = () => {
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
             <div id='experience-container'>
                 <p  className='text-4xl font-bold inline border-b-4 border-purple-700 '>{t("experience.title")}</p>
-                <p className='py-6'>{t("experience.body")}</p>
+                <p className='py-6 mb-10'>{t("experience.body")}</p>
             </div>
 
             <div className='mb-40 w-full grid grid-cols-2 sm:grid-cols-5 gap-8 text-center py-8 px-12 sm:px-0'>

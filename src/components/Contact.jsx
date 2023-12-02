@@ -14,7 +14,7 @@ const Contact = () => {
         <div className='flex flex-col p-4 justify-center max-w-screen mx-auto h-full'>
             <div id='contact-container' className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-purple-600'>{t("contact.title")}</p>
-                <p className='py-6'>{t("contact.body")}</p>
+                <p className='py-6 mb-6'>{t("contact.body")}</p>
             </div>
 
             <div className='flex justify-center items-center'>
