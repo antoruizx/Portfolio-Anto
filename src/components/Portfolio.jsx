@@ -1,5 +1,7 @@
 import React from 'react';
-import Reed from '../assets/img/capturareed.png';
+import Reed from '../assets/img/capturareed-r.png';
+import Piaceres from '../assets/img/piaceres 2.png';
+import Weloveplanet from '../assets/img/weloveplanet-r.png';
 import '../styles/Portfolio.css';
 import { useTranslation } from 'react-i18next';
 
@@ -10,15 +12,21 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: Reed,
+            src: Piaceres,
+            link: 'https://piaceres-cooking-recipes.vercel.app/',
+            title: 'Piaceres',
         },
         {
             id: 2,
             src: Reed,
+            link: 'https://reed-project-gilt.vercel.app/',
+            title: 'Reed',
         },
         {
             id: 3,
-            src: Reed,
+            src: Weloveplanet,
+            link: 'https://we-love-planet.vercel.app/',
+            title: 'We ❤️ planet',
         },
     ];
 
@@ -34,7 +42,7 @@ const Portfolio = () => {
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mb-40'>
-            {portfolios.map(({ id, src}) => (
+            {portfolios.map(({ id, src, link, title}) => (
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                 <img 
                 src={src} 
@@ -42,7 +50,7 @@ const Portfolio = () => {
                 className='rounded-md duration-200 hover:scale-105'
                 />
                 <div className='flex items-center justify-center'>
-                    <a href='https://reed-project-gilt.vercel.app/' className='w-1/2 px-12 py-2 m-2 font-bold duration-200 hover:scale-105'>Reed</a>
+                    <a href={link} className='w-1/2 px-12 py-1 m-2 font-bold duration-200 hover:scale-105'>{title}</a>
 
                 </div>
             </div>

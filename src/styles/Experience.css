@@ -1,4 +1,5 @@
 #experience-container{ 
     display: grid;
     place-items: center;
+    border-radius: 150%;
 }

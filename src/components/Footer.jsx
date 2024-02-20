@@ -8,16 +8,17 @@ import {
   MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
+import SocialLinks2 from './SocialLinks2';
 
 export default function Footer() {
   return (
     <MDBFooter className='bg-dark font-bold text-center text-white ' style={{ backgroundColor: 'black' }}>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'black' }}>
-        © 2023 Copyright | Portfolio de Nadia Antonella Ruiz
-        <a className='text-white'>
-        
-        </a>
+      <div className='text-center p-4' style={{ backgroundColor: 'black' }}>
+        © 2024 Copyright | Portfolio de Nadia Antonella Ruiz
+      </div>
+      <div>
+        <SocialLinks2 />
       </div>
     </MDBFooter>
   );

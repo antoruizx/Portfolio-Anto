@@ -1,4 +1,11 @@
 {
+    "navbar": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "portfolio": "Portafolio",
+        "experience": "Experiencia",
+        "contact": "Contacto"
+    },
     "home": {
         "title": "Soy programadora Fullstack",
         "body": "Hola! Soy Nadia Antonella Ruiz, vivo en Argentina. Trabajé en proyectos utilizando tecnologías como React, Express.js, MongoDB y más. Mi enfoque es crear soluciones que sean a la vez funcionales y estéticamente atractivas.",
