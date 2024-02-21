@@ -8,7 +8,7 @@ import {
   MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
-import SocialLinks2 from './SocialLinks2';
+
 
 export default function Footer() {
   return (
@@ -17,9 +17,7 @@ export default function Footer() {
       <div className='text-center p-4' style={{ backgroundColor: 'black' }}>
         © 2024 Copyright | Portfolio de Nadia Antonella Ruiz
       </div>
-      <div>
-        <SocialLinks2 />
-      </div>
+
     </MDBFooter>
   );
 }
