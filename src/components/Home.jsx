@@ -38,9 +38,14 @@ const Home = () => {
             </div>
 
 <div className='container padre'>
-<button onClick={() => handleChangeLanguage("en")} className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-3 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 font-bold en'>EN</button>
+    <div className='cajaEN'>
+       <button onClick={() => handleChangeLanguage("en")} className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-3 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 font-bold en'>EN</button> 
+    </div>
 
-<button onClick={() => handleChangeLanguage("es")} className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-3 py-3 my-4 mx-auto flex rounded-md hover:scale-110 duration-300 font-bold es'>ES</button>
+    <div className='cajaES'>
+        <button onClick={() => handleChangeLanguage("es")} className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-3 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 font-bold es'>ES</button>
+    </div>
+
 </div>
 
         </div>

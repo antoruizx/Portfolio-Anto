@@ -1,1 +1,11 @@
 
+/* Estilos de iconos */
+
+ion-icon {
+    font-size: 25px;
+
+}
+
+.buttons-rrss {
+    justify-content: space-between;
+}
