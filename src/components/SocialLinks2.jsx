@@ -42,22 +42,22 @@ const SocialLinks2 = () => {
                 </>
             ),
             href: 'https://github.com/antoruizx',
-            style: 'rounded-tr-md',
+ 
         },
     ];
   return (
-    <div className='hidden lg:flex flex-col top-[35%] right-0 fixed'>
-            <ul>
-                {links.map(({ id, child, href, style, download }) => (
+    <div className=''>
+            <ul className='container-social-links'>
+                {links.map(({ id, child, href, style }) => (
                     <li
                         key={id}
                         className={'p-1.5' +
-                            " " +
+                            "icon-social-links" +
                             style
                         }
                     >
                         <a href={href}
-                            className='flex justify-between items-center w-full text-white'
+                            className=''
                             target='_blank'
                             rel="noreferrer"
                         >
