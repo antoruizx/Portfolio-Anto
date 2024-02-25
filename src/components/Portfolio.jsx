@@ -13,7 +13,7 @@ const Portfolio = () => {
         {
             id: 1,
             src: Piaceres,
-            link: 'https://piaceres-cooking-recipes.vercel.app/',
+            link: 'https://piaceres-cooking-recipes-pivn.vercel.app/',
             title: 'Piaceres',
         },
         {
