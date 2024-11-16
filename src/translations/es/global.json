@@ -13,20 +13,20 @@
     },
     "about": {
         "title": "Sobre mí",
-        "body": "Creo firmemente que el mundo está para innovar y transformarse. Me interesa utilizar la tecnología como una fuerza para el bien, para transformar vidas y crear un impacto positivo en el mundo. Mi enfoque no se limita sólo a proyectos técnicos, sino que se extiende a la responsabilidad emocional y mental.",
-        "body2": "Me gusta escuchar música, mis géneros favoritos son el trap, el pop y el rock nacional. Soy vegetariana, me encanta cocinar, siento que es mi cable a tierra y siempre me hace feliz poder descubrir y hacer un plato nuevo. Libro actual: El poder del ahora."
+        "body": "Apasionada por la tecnología y su poder para generar impacto un positivo. Creo que la innovación es un enlace hacia la transformación social, emocional y mental, me interesa relacionar habilidades blandas con habilidades técnicas.",
+        "body2": "Amante de la música (trap, pop y rock nacional) y de la cocina vegetariana, mi cable a tierra. Me encanta leer libros de desarrollo personal y descubrir nuevos sabores para mis platos, que sean a la vez nutritivos y protéicos, para tener buen rendimiento junto con mi entrenamiento físico."
     },
     "portfolio": {
         "title": "Portafolio",
-        "body": "¡Mirá mis proyectos! Están hechos con mucho amor."
+        "body": "Mirá mis proyectos 🙌"
     },
     "experience": {
         "title": "Experiencia",
-        "body": "Estas son las tecnologías con las que trabajé."
+        "body": "Estas son las tecnologías con las que trabajé 🧑‍💻"
     },
     "contact": {
         "title": "Contacto",
-        "body": "Si estás interesado en trabajar conmigo. ¡Escríbeme!",
+        "body": "Si estás interesado en trabajar conmigo. Contactame 📩",
         "name-placeholder": "Ingrese su nombre",
         "email-placeholder": "Ingrese su email",
         "message-placeholder": "Ingrese su mensaje",

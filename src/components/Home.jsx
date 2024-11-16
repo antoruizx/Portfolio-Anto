@@ -21,7 +21,7 @@ const Home = () => {
                 </p>
                 <div>
                     <a 
-                    href='https://drive.google.com/uc?id=1HS64IC5h61iniTJedcjz-S6LAkQajpm9&export=download'
+                    href='https://drive.google.com/uc?id=1Y1o_e_RQANTsYeQcAMeMpJ06T1MlwmaD&export=download'
                     smooth duration={500} 
                     className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-600 to-purple-900 hover:scale-110 duration-300 font-bold cursor-pointer'>
                     {t("home.cv")}
