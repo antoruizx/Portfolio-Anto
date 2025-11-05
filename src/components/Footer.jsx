@@ -1,16 +1,13 @@
-import React from 'react';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white text-center py-6">
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-4">
-        {/* Texto */}
         <p className="text-sm md:text-base">
-          © 2025 Portfolio de Nadia Antonella Ruiz
+          © 2025 | Portfolio de Nadia Antonella Ruiz
         </p>
 
-        {/* Íconos sociales */}
         <div className="flex items-center gap-5 text-xl">
           <a
             href="https://www.linkedin.com/in/antoruizx/"
