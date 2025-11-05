@@ -1,26 +1,43 @@
 import React from 'react';
-import SocialLinks2 from './SocialLinks2';
-
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn
-} from 'mdb-react-ui-kit';
-
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <MDBFooter className='bg-dark font-bold text-center text-white ' style={{ backgroundColor: 'black' }}>
+    <footer className="bg-black text-white text-center py-6">
+      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-4">
+        {/* Texto */}
+        <p className="text-sm md:text-base">
+          © 2025 Portfolio de Nadia Antonella Ruiz
+        </p>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'black' }}>
-        © 2024 Copyright | Portfolio de Nadia Antonella Ruiz
-        <SocialLinks2 />
-
+        {/* Íconos sociales */}
+        <div className="flex items-center gap-5 text-xl">
+          <a
+            href="https://www.linkedin.com/in/antoruizx/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-purple-500 transition-colors duration-300"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/antoruizx"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-purple-500 transition-colors duration-300"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://wa.me/5493814988682"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-purple-500 transition-colors duration-300"
+          >
+            <FaWhatsapp />
+          </a>
+        </div>
       </div>
-
-    </MDBFooter>
+    </footer>
   );
 }
