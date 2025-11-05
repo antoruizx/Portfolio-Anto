@@ -20,13 +20,13 @@ const Portfolio = () => {
             id: 2,
             src: Reed,
             link: 'https://reed-project-gilt.vercel.app/',
-            title: 'Reed',
+            title: 'Sitio web para marca de ropa con catálogo dinámico, presentación de productos y sección de contacto',
         },
         {
             id: 3,
-            src: Weloveplanet,
-            link: 'https://we-love-planet.vercel.app/',
-            title: 'We ❤️ planet',
+            src: Ruiz & Associates,
+            link: 'https://ruizxasociados.vercel.app/',
+            title: '',
         },
     ];
 
