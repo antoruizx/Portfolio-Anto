@@ -18,7 +18,10 @@
     },
     "portfolio": {
         "title": "Portfolio",
-        "body": "Look at my projects!"
+        "body": "Look at my projects!",
+        "piaceresDesc": "Informative website for a restaurant, featuring a dynamic contact form and a digital menu section under development.",
+        "reedDesc": "Website with a dynamic product catalog and user authentication. Built with connected frontend and backend, including signup, login, and token-based security.",
+        "ruizDesc": "Informative landing page for an accounting firm, developed using AI-powered tools."
     },
     "experience": {
         "title": "Experience",

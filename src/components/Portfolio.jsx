@@ -13,24 +13,21 @@ const Portfolio = () => {
       src: Piaceres,
       link: 'https://piaceres-resto.vercel.app/',
       title: 'Piaceres',
-      description:
-        'Sitio web para un restaurante. Incluye una sección de contacto con formulario dinámico que envía los datos por correo, y una sección de menú digital en desarrollo.',
+      description: t("portfolio.piaceresDesc"),
     },
     {
       id: 2,
       src: Reed,
       link: 'https://reed-project-gilt.vercel.app/',
       title: 'Reed',
-      description:
-        'Sitio web con catálogo dinámico y autenticación de usuarios. Desarrollado con frontend y backend conectados. Incluye registro, login y protección por token.',
+      description: t("portfolio.reedDesc"),
     },
     {
       id: 3,
       src: RuizAssociates,
       link: 'https://ruizxasociados.vercel.app/',
       title: 'Ruiz & Associates',
-      description:
-        'Landing page informativa para un estudio contable. Desarrollada como sitio estático con diseño moderno generado con herramientas de inteligencia artificial.',
+      description: t("portfolio.ruizDesc"),
     },
   ];
 
