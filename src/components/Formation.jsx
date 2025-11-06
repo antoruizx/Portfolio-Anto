@@ -12,7 +12,7 @@ const Formation = () => {
       institution: t("formation.bootcamp.institution"),
       period: t("formation.bootcamp.period"),
       description: t("formation.bootcamp.description"),
-      link: "https://drive.google.com/uc?export=download&id=1qLZMppVvccFBmvrX407THo_qxluELiiT",
+      link: "https://drive.google.com/file/d/1zv37spQAcObQjkuSW8IQfmjdBu0ALSdO/view",
     },
     {
       id: 2,
@@ -34,10 +34,10 @@ const Formation = () => {
   return (
     <div
       name='formation'
-      className='w-full bg-gradient-to-b from-black to-gray-800 text-white py-24' // más padding vertical
+      className='w-full bg-gradient-to-b from-black to-gray-800 text-white py-24'
     >
       <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='text-center pb-12'> {/* más separación debajo del título */}
+        <div className='text-center pb-12'>
           <p className='text-4xl font-bold inline border-b-4 border-purple-700'>
             {t("formation.title")}
           </p>
@@ -46,7 +46,7 @@ const Formation = () => {
           </p>
         </div>
 
-        <div className='space-y-12 mt-8'> {/* más espacio entre bloques */}
+        <div className='space-y-12 mt-8'>
           {education.map(({ id, title, institution, period, description, link }) => (
             <div
               key={id}
