@@ -22,7 +22,8 @@
     "body": "Mirá mis proyectos!",
     "piaceresDesc": "Sitio web informativo para un restaurante, con formulario de contacto dinámico y menú digital en desarrollo.",
     "reedDesc": "Sitio web con catálogo dinámico y autenticación de usuarios. Desarrollado con frontend y backend conectados, incluye registro, login y protección por token.",
-    "ruizDesc": "Landing page informativa para un estudio contable, desarrollada con herramientas de inteligencia artificial."
+    "ruizDesc": "Landing page informativa para un estudio contable, desarrollada con herramientas de inteligencia artificial.",
+    "button": "Ver proyecto"
   },
   "experience": {
     "title": "Experiencia",

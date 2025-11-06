@@ -34,17 +34,19 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white min-h-screen"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-24"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div id="portfolio-container" className="pb-8 text-center">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        <div id="portfolio-container" className="text-center pb-12">
           <p className="text-4xl font-bold inline border-b-4 border-purple-700">
             {t('portfolio.title')}
           </p>
-          <p className="py-6 mb-10">{t('portfolio.body')}</p>
+          <p className="text-lg text-gray-300 mt-6">
+            {t('portfolio.body')}
+          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 sm:px-0 mb-40">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 sm:px-0">
           {portfolios.map(({ id, src, link, title, description }) => (
             <div
               key={id}
@@ -55,7 +57,7 @@ const Portfolio = () => {
                 alt={title}
                 className="w-full h-48 object-cover"
               />
-              <div className="flex-1 p-6 pb-8 flex flex-col items-center justify-between">
+              <div className="flex-1 p-6 flex flex-col items-center justify-between">
                 <div className="mb-4">
                   <p className="text-center font-bold text-lg mb-2">{title}</p>
                   <p className="text-sm text-gray-300 text-center">{description}</p>
@@ -64,9 +66,9 @@ const Portfolio = () => {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-purple-700 text-white rounded-md hover:bg-purple-800 transition-colors"
+                  className="mt-auto px-5 py-2 bg-purple-700 text-white rounded-md hover:bg-purple-800 transition-colors duration-300"
                 >
-                  Ver proyecto
+                  {t('portfolio.button')}
                 </a>
               </div>
             </div>

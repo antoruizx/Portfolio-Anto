@@ -21,153 +21,60 @@ import AWS from "../assets/img/icons skills/AWS.svg";
 import '../styles/Experience.css';
 import { useTranslation } from 'react-i18next';
 
-
 const Experience = () => {
-    const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation("global");
 
-    const techs = [
-        {
-            id: 1,
-            src: html,
-            title: 'HTML',
-            style: 'shadow-orange-500'
-        },
-        {
-            id: 2,
-            src: css,
-            title: 'CSS',
-            style: 'shadow-blue-500'
-        },
-        {
-            id: 3,
-            src: javascript,
-            title: 'Javascript',
-            style: 'shadow-yellow-500'
-        },
-        {
-            id: 4,
-            src: reactIcon,
-            title: 'React',
-            style: 'shadow-blue-600'
-        },
-        {
-            id: 5,
-            src: bootstrap,
-            title: 'Bootstrap',
-            style: 'shadow-purple-500'
-        },
-        {
-            id: 6,
-            src: mongodb,
-            title: 'MongoDB',
-            style: 'shadow-green-500'
-        },
-        {
-            id: 7,
-            src: tailwind,
-            title: 'Tailwind',
-            style: 'shadow-purple-400'
-        },
-        {
-            id: 8,
-            src: github,
-            title: 'Github',
-            style: 'shadow-purple-600'
-        },
-        {
-            id: 9,
-            src: nodeJs,
-            title: 'NodeJs',
-            style: 'shadow-green-600'
-        },
-        {
-            id: 10,
-            src: Postman,
-            title: 'Postman',
-            style: 'shadow-orange-600'
-        },
-        {
-            id: 11,
-            src: ExpressJs,
-            title: 'ExpressJs',
-            style: 'shadow-gray-500'
-        },
-        {
-            id: 12,
-            src: ViteJs,
-            title: 'ViteJs',
-            style: 'shadow-purple-600'
-        },
-        {
-            id: 13,
-            src: Python,
-            title: 'Python',
-            style: 'shadow-yellow-500'
-        },  
-        {
-            id: 14,
-            src: CSharp,
-            title: 'C#',
-            style: 'shadow-purple-500'
-        }, 
-        {
-            id: 15,
-            src: MySQL,
-            title: 'MySQL',
-            style: 'shadow-blue-500'
-        },
-        {
-            id: 16,
-            src: Firebase,
-            title: 'Firebase',
-            style: 'shadow-orange-500'
-        },
-        {
-            id: 17,
-            src: Terraform,
-            title: 'Terraform',
-            style: 'shadow-purple-500'
-        },
-        {
-            id: 18,
-            src: Docker,
-            title: 'Docker',
-            style: 'shadow-blue-500'
-        },  
-        {
-            id: 19,
-            src: AWS,
-            title: 'AWS',
-            style: 'shadow-orange-500'
-        },                                          
-    ];
+  const techs = [
+    { id: 1, src: html, title: 'HTML', style: 'shadow-orange-500' },
+    { id: 2, src: css, title: 'CSS', style: 'shadow-blue-500' },
+    { id: 3, src: javascript, title: 'Javascript', style: 'shadow-yellow-500' },
+    { id: 4, src: reactIcon, title: 'React', style: 'shadow-blue-600' },
+    { id: 5, src: bootstrap, title: 'Bootstrap', style: 'shadow-purple-500' },
+    { id: 6, src: mongodb, title: 'MongoDB', style: 'shadow-green-500' },
+    { id: 7, src: tailwind, title: 'Tailwind', style: 'shadow-purple-400' },
+    { id: 8, src: github, title: 'Github', style: 'shadow-purple-600' },
+    { id: 9, src: nodeJs, title: 'NodeJs', style: 'shadow-green-600' },
+    { id: 10, src: Postman, title: 'Postman', style: 'shadow-orange-600' },
+    { id: 11, src: ExpressJs, title: 'ExpressJs', style: 'shadow-gray-500' },
+    { id: 12, src: ViteJs, title: 'ViteJs', style: 'shadow-purple-600' },
+    { id: 13, src: Python, title: 'Python', style: 'shadow-yellow-500' },
+    { id: 14, src: CSharp, title: 'C#', style: 'shadow-purple-500' },
+    { id: 15, src: MySQL, title: 'MySQL', style: 'shadow-blue-500' },
+    { id: 16, src: Firebase, title: 'Firebase', style: 'shadow-orange-500' },
+    { id: 17, src: Terraform, title: 'Terraform', style: 'shadow-purple-500' },
+    { id: 18, src: Docker, title: 'Docker', style: 'shadow-blue-500' },
+    { id: 19, src: AWS, title: 'AWS', style: 'shadow-orange-500' },
+  ];
 
   return (
     <div 
-        name='experience'
-        className='bg-gradient-to-b from-gray-800 to-black w-full text-white pt-20 pb-40'
+      name='experience'
+      className='bg-gradient-to-b from-gray-800 to-black w-full text-white py-24'
     >
-        <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
-            <div id='experience-container'>
-                <p  className='text-4xl font-bold inline border-b-4 border-purple-700 '>{t("experience.title")}</p>
-                <p className='py-6 mb-10'>{t("experience.body")}</p>
-            </div>
-
-            <div className='mb-40 w-full grid grid-cols-2 sm:grid-cols-5 gap-8 text-center py-8 px-12 sm:px-0'>
-
-            {techs.map(({ id, src, title, style }) => (
-                <div 
-                key={id}
-                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-                <img src={src} alt="" className='w-20 mx-auto' />
-                <p className='mt-4'>{title}</p>
-            </div>
-            ))}
-
-            </div>
+      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
+        <div id='experience-container' className='text-center pb-12'>
+          <p className='text-4xl font-bold inline border-b-4 border-purple-700'>
+            {t("experience.title")}
+          </p>
+          <p className='text-lg text-gray-300 mt-6'>
+            {t("experience.body")}
+          </p>
         </div>
+
+        <div className='w-full grid grid-cols-2 sm:grid-cols-5 gap-8 text-center py-8 px-12 sm:px-0'>
+          {techs.map(({ id, src, title, style }) => (
+            <div 
+              key={id}
+              className={`shadow-md hover:scale-105 duration-500 py-4 rounded-lg ${style}`}
+            >
+              <img src={src} alt={title} className='w-20 mx-auto' />
+              <p className='mt-4'>{title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Experience;
