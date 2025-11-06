@@ -1,7 +1,5 @@
-import React from 'react';
 import '../styles/Contact.css';
 import { useTranslation } from 'react-i18next';
-import SocialLinks2 from './SocialLinks2';
 
 
 const Contact = () => {
