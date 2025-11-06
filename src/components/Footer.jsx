@@ -2,13 +2,10 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white text-center py-6">
-      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-4">
-        <p className="text-sm md:text-base">
-          © 2025 | Portfolio de Nadia Antonella Ruiz
-        </p>
-
-        <div className="flex items-center gap-5 text-xl">
+    <footer className="bg-black text-white py-6">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center text-center gap-4 px-6">
+        {/* Redes sociales */}
+        <div className="flex items-center gap-6 text-2xl">
           <a
             href="https://www.linkedin.com/in/antoruizx/"
             target="_blank"
@@ -34,6 +31,11 @@ export default function Footer() {
             <FaWhatsapp />
           </a>
         </div>
+
+        {/* Texto de copyright */}
+        <p className="text-sm md:text-base">
+          © 2025 | Portfolio de Nadia Antonella Ruiz
+        </p>
       </div>
     </footer>
   );

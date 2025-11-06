@@ -1,0 +1,12 @@
+#formation-container {
+  margin-bottom: 2rem;
+}
+
+.formation-item {
+  transition: all 0.3s ease;
+}
+
+.formation-item:hover {
+  transform: translateX(5px);
+  border-color: #a855f7; 
+}

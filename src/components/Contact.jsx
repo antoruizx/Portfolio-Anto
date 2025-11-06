@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div
         name='contact'
-        className='w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white'
+        className='w-full bg-gradient-to-b from-gray-800 to-black text-white py-20'
     >
         <div className='flex flex-col p-4 justify-center max-w-screen mx-auto h-full'>
             <div id='contact-container' className='pb-8'>
