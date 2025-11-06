@@ -22,6 +22,9 @@ const About = () => {
                 <br />
                 <br />
                 {t("about.body2")}
+                <br />
+                <br />
+                {t("about.body3")}
                 </p>
     
             </div>
