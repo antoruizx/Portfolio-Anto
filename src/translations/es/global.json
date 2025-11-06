@@ -1,40 +1,62 @@
 {
-    "navbar": {
-        "home": "Inicio",
-        "about": "Sobre mí",
-        "portfolio": "Portafolio",
-        "experience": "Experiencia",
-        "contact": "Contacto"
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "portfolio": "Portafolio",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Soy programadora Fullstack",
+    "body": "Hola! Soy Nadia Antonella Ruiz. Soy estudiante del último año de la Tecnicatura Universitaria en Programación en la UTN. Trabajé en proyectos utilizando tecnologías como React, Express.js, MongoDB y más. Mi enfoque es crear soluciones que sean funcionales y estéticamente atractivas.",
+    "cv": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "body": "Soy una apasionada de la tecnología y de cómo puede generar un impacto positivo en la vida de las personas. Para mí, la innovación es una forma de transformar la sociedad, las emociones y la mente. Me gusta combinar las habilidades técnicas con las blandas, porque creo que el equilibrio entre ambas marca la diferencia.",
+    "body2": "Me gusta cocinar y leer; son actividades que me ayudan a conectar conmigo misma y mantener la mente creativa. Disfruto escuchar música y practicar yoga tres veces por semana.",
+    "body3": "Me considero curiosa por naturaleza. Disfruto aprender, explorar ideas nuevas y compartir lo que sé. Creo que el crecimiento personal y profesional van de la mano, y trato de vivir con esa mentalidad."
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "body": "Mirá mis proyectos!",
+    "piaceresDesc": "Sitio web informativo para un restaurante, con formulario de contacto dinámico y menú digital en desarrollo.",
+    "reedDesc": "Sitio web con catálogo dinámico y autenticación de usuarios. Desarrollado con frontend y backend conectados, incluye registro, login y protección por token.",
+    "ruizDesc": "Landing page informativa para un estudio contable, desarrollada con herramientas de inteligencia artificial."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "body": "Estas son las tecnologías con las que trabajé 🧑‍💻"
+  },
+  "formation": {
+    "title": "Formación",
+    "subtitle": "Estas son las formaciones que me ayudaron a fortalecer mis habilidades técnicas y mi enfoque en el desarrollo de soluciones funcionales.",
+    "button": "Ver certificado",
+    "bootcamp": {
+      "title": "Bootcamp AWS DevOps",
+      "institution": "Globant - Programa de Becas",
+      "period": "2024",
+      "description": "Bootcamp intensivo enfocado en infraestructura en la nube, CI/CD y automatización con AWS. Curso aprobado con certificación oficial."
     },
-    "home": {
-        "title": "Soy programadora Fullstack",
-        "body": "Hola! Soy Nadia Antonella Ruiz, vivo en Argentina. Soy estudiante del último año de la Tecnicatura Universitaria en Programación en la UTN. Trabajé en proyectos utilizando tecnologías como React, Express.js, MongoDB y más. Mi enfoque es crear soluciones que sean funcionales y estéticamente atractivas.",
-        "cv": "Descargar CV"
+    "utn": {
+      "title": "Tecnicatura Universitaria en Programación",
+      "institution": "Universidad Tecnológica Nacional (UTN)",
+      "period": "2024 - Actualidad",
+      "description": "Conocimientos en lenguajes de programación y bases de datos, abarcando Python, C#, SQL, MySQL, MongoDB, JavaScript y React. También se estudian fundamentos de la programación, inglés técnico y la historia de la disciplina."
     },
-    "about": {
-        "title": "Sobre mí",
-        "body": "Soy una apasionada de la tecnología y de cómo puede generar un impacto positivo en la vida de las personas. Para mí, la innovación es una forma de transformar la sociedad, las emociones y la mente. Me gusta combinar las habilidades técnicas con las blandas, porque creo que el equilibrio entre ambas marca la diferencia.",
-        "body2": "Me gusta cocinar y leer; son actividades que me ayudan a conectar conmigo misma y mantener la mente creativa. Disfruto escuchar música y practicar yoga tres veces por semana.",
-        "body3": "Me considero curiosa por naturaleza. Disfruto aprender, explorar ideas nuevas y compartir lo que sé. Creo que el crecimiento personal y profesional van de la mano, y trato de vivir con esa mentalidad."
-    },
-    "portfolio": {
-        "title": "Portafolio",
-        "body": "Mirá mis proyectos!",
-        "piaceresDesc": "Sitio web informativo para un restaurante, con formulario de contacto dinámico y menú digital en desarrollo.",
-        "reedDesc": "Sitio web con catálogo dinámico y autenticación de usuarios. Desarrollado con frontend y backend conectados, incluye registro, login y protección por token.",
-        "ruizDesc": "Landing page informativa para un estudio contable, desarrollada con herramientas de inteligencia artificial."
-    },
-    "experience": {
-        "title": "Experiencia",
-        "body": "Estas son las tecnologías con las que trabajé 🧑‍💻"
-    },
-    "contact": {
-        "title": "Contacto",
-        "body": "Si estás interesado en trabajar conmigo. Contactame 📩",
-        "name-placeholder": "Ingrese su nombre",
-        "email-placeholder": "Ingrese su email",
-        "message-placeholder": "Ingrese su mensaje",
-        "send": "Enviar"
+    "courses": {
+      "title": "Full Stack Web Developer",
+      "institution": "Autodidacta y plataformas online",
+      "period": "2022 - 2025",
+      "description": "Proyectos enfocados en React, Node.js, Express, MongoDB y herramientas de diseño como Figma y Photoshop."
     }
-    
+  },
+  "contact": {
+    "title": "Contacto",
+    "body": "Si estás interesado en trabajar conmigo. Contactame 📩",
+    "name-placeholder": "Ingrese su nombre",
+    "email-placeholder": "Ingrese su email",
+    "message-placeholder": "Ingrese su mensaje",
+    "send": "Enviar"
+  }
 }

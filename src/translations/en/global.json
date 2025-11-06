@@ -1,40 +1,62 @@
 {
-    "navbar": {
-        "home": "Home",
-        "About": "About",
-        "Portfolio": "Portfolio",
-        "Experience": "Experience",
-        "Contact": "Contact"
+  "navbar": {
+    "home": "Home",
+    "About": "About",
+    "Portfolio": "Portfolio",
+    "Experience": "Experience",
+    "Contact": "Contact"
+  },
+  "home": {
+    "title": "I'm FullStack Developer",
+    "body": "Hi! I'm Nadia Antonella Ruiz. I'm a final-year student in the University Technical Program in Programming at UTN. I've worked on projects using technologies like React, Express.js, MongoDB, and more. My focus is on creating solutions that are both functional and aesthetically pleasing.",
+    "cv": "Download CV"
+  },
+  "about": {
+    "title": "About me",
+    "body": "I'm passionate about technology and how it can have a positive impact on people's lives. For me, innovation is a way to transform society, emotions, and mindsets. I enjoy combining technical and soft skills because I believe that the balance between the two makes all the difference.",
+    "body2": "I enjoy cooking and reading; these activities help me connect with myself and keep my mind creative. I also enjoy listening to music and practicing yoga three times a week.",
+    "body3": "I consider myself naturally curious. I enjoy learning, exploring new ideas, and sharing what I know. I believe that personal and professional growth go hand in hand, and I try to live by that mindset."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "body": "Look at my projects!",
+    "piaceresDesc": "Informative website for a restaurant, featuring a dynamic contact form and a digital menu section under development.",
+    "reedDesc": "Website with a dynamic product catalog and user authentication. Built with connected frontend and backend, including signup, login, and token-based security.",
+    "ruizDesc": "Informative landing page for an accounting firm, developed using AI-powered tools."
+  },
+  "experience": {
+    "title": "Experience",
+    "body": "These are the technologies I have worked with."
+  },
+  "formation": {
+    "title": "Education",
+    "subtitle": "These are the learning experiences that helped me strengthen my technical skills and my focus on developing functional and scalable solutions.",
+    "button": "View certificate",
+    "bootcamp": {
+      "title": "AWS DevOps Bootcamp",
+      "institution": "Globant - Scholarship Program",
+      "period": "2024",
+      "description": "Intensive bootcamp focused on cloud infrastructure, CI/CD, and automation using AWS. Successfully completed with official certification."
     },
-    "home": {
-        "title": "I'm FullStack Developer",
-        "body": "Hi! I'm Nadia Antonella Ruiz, and I live in Argentina. I'm a final-year student in the University Technical Program in Programming at UTN. I've worked on projects using technologies like React, Express.js, MongoDB, and more. My focus is on creating solutions that are both functional and aesthetically pleasing.",
-        "cv": "Download CV"
+    "utn": {
+      "title": "University Degree in Programming",
+      "institution": "National Technological University (UTN)",
+      "period": "2024 - Present",
+      "description": "Knowledge in programming languages and databases, including Python, C#, SQL, MySQL, MongoDB, JavaScript, and React. The program also covers programming fundamentals, technical English, and the history of computing."
     },
-    "about": {
-        "title": "About me",
-        "body": "I'm passionate about technology and how it can have a positive impact on people's lives. For me, innovation is a way to transform society, emotions, and mindsets. I enjoy combining technical and soft skills because I believe that the balance between the two makes all the difference.",
-        "body2": "I enjoy cooking and reading; these activities help me connect with myself and keep my mind creative. I also enjoy listening to music and practicing yoga three times a week.",
-        "body3": "I consider myself naturally curious. I enjoy learning, exploring new ideas, and sharing what I know. I believe that personal and professional growth go hand in hand, and I try to live by that mindset."
-    },
-    "portfolio": {
-        "title": "Portfolio",
-        "body": "Look at my projects!",
-        "piaceresDesc": "Informative website for a restaurant, featuring a dynamic contact form and a digital menu section under development.",
-        "reedDesc": "Website with a dynamic product catalog and user authentication. Built with connected frontend and backend, including signup, login, and token-based security.",
-        "ruizDesc": "Informative landing page for an accounting firm, developed using AI-powered tools."
-    },
-    "experience": {
-        "title": "Experience",
-        "body": "These are the technologies I have worked with."
-    },
-    "contact": {
-        "title": "Contact",
-        "body": "If you are interested in working with me. Write me!",
-        "name-placeholder": "Enter your name",
-        "email-placeholder": "Enter your email",
-        "message-placeholder": "Enter your message",
-        "send": "Send"
+    "courses": {
+      "title": "Full Stack Web Developer",
+      "institution": "Self-taught and online platforms",
+      "period": "2022 - 2025",
+      "description": "Projects focused on React, Node.js, Express, MongoDB, and design tools such as Figma and Photoshop."
     }
-
+  },
+  "contact": {
+    "title": "Contact",
+    "body": "If you are interested in working with me. Write me!",
+    "name-placeholder": "Enter your name",
+    "email-placeholder": "Enter your email",
+    "message-placeholder": "Enter your message",
+    "send": "Send"
+  }
 }
