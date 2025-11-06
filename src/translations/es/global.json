@@ -47,9 +47,9 @@
     },
     "courses": {
       "title": "Full Stack Web Developer",
-      "institution": "Autodidacta y plataformas online",
-      "period": "2022 - 2025",
-      "description": "Proyectos enfocados en React, Node.js, Express, MongoDB y herramientas de diseño como Figma y Photoshop."
+      "institution": "Universidad Tecnológica Nacional (UTN)",
+      "period": "2023",
+      "description": "Proyectos centrados en React, Node.js, Express y MongoDB, utilizando también herramientas de diseño (Figma, Adobe XD) y de gestión de tareas."
     }
   },
   "contact": {
