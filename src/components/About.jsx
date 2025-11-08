@@ -8,10 +8,10 @@ const About = () => {
   return (
     <div
       name='about'
-      className='w-full bg-gradient-to-b from-gray-800 to-black text-white py-24' // reemplaza h-screen por py-24
+      className='w-full bg-gradient-to-b from-gray-800 to-black text-white py-24' 
     >
       <div id='about-container' className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        <div className='text-center pb-12'> {/* igual que en formación */}
+        <div className='text-center pb-12'>
           <p className='text-4xl font-bold inline border-b-4 border-purple-700'>
             {t("about.title")}
           </p>
