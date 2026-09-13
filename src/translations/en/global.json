@@ -20,9 +20,9 @@
   "portfolio": {
     "title": "Portfolio",
     "body": "Look at my projects!",
-    "piaceresDesc": "Informative website for a restaurant, featuring a dynamic contact form and a digital menu section under development.",
-    "reedDesc": "Website with a dynamic product catalog and user authentication. Built with connected frontend and backend, including signup, login, and token-based security.",
-    "ruizDesc": "Informative landing page for an accounting firm, developed using AI-powered tools.",
+    "piaceresDesc": "Multi‑page informative website for a restaurant, showcasing menus, services, and contact details. Built with a responsive design using JavaScript, CSS, and HTML, providing a clean and engaging user experience.",
+    "reedDesc": "Website with a dynamic product catalog and user authentication. Built with a connected frontend and backend, including signup, login, and token‑based security. Developed using React, Vite, JavaScript, CSS, and HTML, with responsive design and product listing features.",
+    "ruizDesc": "Informative landing page for an accounting firm, featuring a contact form that sends client details directly to email. Designed initially with Loveable and further developed using TypeScript, CSS, and HTML for a responsive and professional layout.",
     "legalDesc": "Website with client and case management, dynamic task tracking, and user authentication. Built with a connected frontend and backend, including signup, login, and token‑based security. Developed using ASP.NET Core Web API, Entity Framework Core, PostgreSQL, and React + Vite.",
     "button": "View project"
   },
