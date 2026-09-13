@@ -5,9 +5,11 @@ import '../styles/LanguageButton.css';
 
 const Home = () => {
     const [t, i18n] = useTranslation("global");
-    const handleChangeLanguage = (lang: string) => {
+
+    const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang);
-    }
+    };
+
     return (
         <div
             name="home"
@@ -22,7 +24,6 @@ const Home = () => {
                     <div>
                         <a
                             href='https://drive.google.com/uc?export=download&id=1u_pRAiQ3upUtTMe_MjNZSQjHwEsoG2OF'
-                            smooth duration={500}
                             className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-600 to-purple-900 hover:scale-110 duration-300 font-bold cursor-pointer'>
                             {t("home.cv")}
                         </a>
@@ -39,10 +40,8 @@ const Home = () => {
 
                 <div className='container padre'>
                     <button onClick={() => handleChangeLanguage("en")} className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-3 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 font-bold en'>EN</button>
-
                     <button onClick={() => handleChangeLanguage("es")} className='text-white bg-gradient-to-b from-purple-600 to-purple-900 px-3 py-3 my-4 mx-auto flex rounded-md hover:scale-110 duration-300 font-bold es'>ES</button>
                 </div>
-
             </div>
         </div>
     );

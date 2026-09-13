@@ -2,6 +2,7 @@ import React from 'react';
 import Reed from '../assets/img/capturareed-r.png';
 import Piaceres from '../assets/img/piaceres-2.png';
 import RuizAssociates from '../assets/img/ruizassociates.png';
+import LegalManagementSystem from '../assets/img/LegalManagementSystem.jpeg'
 import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
@@ -28,6 +29,14 @@ const Portfolio = () => {
       link: 'https://ruizxasociados.vercel.app/',
       title: 'Ruiz & Associates',
       description: t("portfolio.ruizDesc"),
+    },
+
+        {
+      id: 4,
+      src: LegalManagementSystem,
+      link: 'https://legalmsystem.netlify.app/login',
+      title: 'Legal Management System',
+      description: t("portfolio.legalDesc"),
     },
   ];
 
