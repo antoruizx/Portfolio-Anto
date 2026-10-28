@@ -27,7 +27,7 @@ Todo el contenido que cambia seguido está en `js/data.js`.
 **Sumar una novedad a la bitácora:** agregá una línea arriba de todo en `BITACORA`:
 
 ```js
-{ fecha:"Nov 2026", tipo:"Evento", titulo:"Presentamos Polaris en la FAPPE", texto:"Contá acá cómo fue." },
+{ fecha:"Nov 2026", tipo:"Evento", titulo:"Presentamos POLARIS en la FAPPE", texto:"Contá acá cómo fue." },
 ```
 
 - `tipo` puede ser `"Proyecto"`, `"Formación"` o `"Evento"` (son los filtros).

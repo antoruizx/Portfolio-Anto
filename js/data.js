@@ -7,7 +7,7 @@
 /* ---------- BITÁCORA: para sumar una novedad, agregá un objeto arriba de todo.
    Con proyecto:"id" aparece el botón "Ver caso de estudio" (el id es el del proyecto en PROYECTOS) ---------- */
 const BITACORA = [
-  { fecha:"7 nov 2026", tipo:"Evento", titulo:"Presentamos Polaris en la FAPPE", texto:"Llevamos nuestro proyecto en equipo a la FAPPE. Después del evento, acá van las fotos.", estado:"soon" },
+  { fecha:"7 nov 2026", tipo:"Evento", titulo:"Presentamos POLARIS en la FAPPE", texto:"Llevamos nuestro proyecto en equipo a la FAPPE. Después del evento, acá van las fotos.", estado:"soon" },
   { fecha:"Actual", tipo:"Formación", titulo:"Cursando el último año", texto:"Tecnicatura Universitaria en Programación - Universidad Tecnológica Nacional", estado:"now" },
   { fecha:"Oct 2026", tipo:"Proyecto", titulo:"ARsuma, red de puntos de Tucumán", proyecto:"arsuma", texto:"Desarrollé ARsuma, una red de puntos y premios para comercios de Tucumán, impulsada por la Federación Económica de Tucumán.", estado:"now" },
   { fecha:"2026", tipo:"Proyecto", titulo:"Foja", proyecto:"foja", texto:"Sistema de gestión para estudios jurídicos (antes Legal Management System) con ASP.NET Core Web API, Entity Framework Core, PostgreSQL y React + Vite." },
