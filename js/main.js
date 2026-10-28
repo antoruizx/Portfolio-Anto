@@ -53,7 +53,6 @@
         <span style="display:flex;gap:16px;flex-wrap:wrap">${p.caso?'<a class="go" href="#caso-foja">Caso de estudio ↓</a>':''}<a class="go" href="${p.link}" target="_blank" rel="noopener">Ver proyecto ↗</a></span></div>
       </div>
     </article>`).join('');
-  { const f=PROYECTOS.find(p=>p.caso); document.getElementById('caseImg').src=f.imgs[f.imgs.length-1]; }
 
   /* ---------- texto rotativo ---------- */
   const words = ["sistemas","páginas web","apps para negocios","experiencias"];

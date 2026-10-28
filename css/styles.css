@@ -236,12 +236,14 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,46px);let
 /* caso de estudio */
 .case{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px}
 .case-col{display:flex;flex-direction:column;gap:16px;min-width:0}
+/* Las 3 tarjetas de la izquierda: mismo alto y juntas igual de altas que la del medio */
+.case-col-left{display:grid;grid-auto-rows:1fr}
 .case-item{display:flex;gap:16px;align-items:flex-start;padding:22px}
 .case-item h3{margin:0 0 6px;font-family:var(--display);font-weight:500;font-size:18px}
 .ico{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(123,92,255,.14);border:1px solid var(--line-strong);color:var(--accent-soft)}
 .ico svg{width:20px;height:20px}
 .case-hero{padding:0;min-height:480px;display:flex;align-items:flex-end;justify-content:center;background:#0d0b14}
-.case-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% top;opacity:.9;max-width:none}
+.case-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;opacity:.9;max-width:none}
 .case-hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(90% 70% at 50% 0%,rgba(123,92,255,.35),transparent 70%),linear-gradient(180deg,rgba(10,9,16,.15) 0%,rgba(10,9,16,.55) 45%,rgba(10,9,16,.96) 100%)}
 .glass{position:relative;z-index:2;margin:22px;padding:20px;border-radius:18px;width:calc(100% - 44px);max-width:300px;background:rgba(24,20,38,.55);border:1px solid rgba(200,186,255,.22);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;flex-direction:column;gap:12px;box-shadow:0 20px 50px -20px #000}
 .glass .brandmini{font-family:var(--display);font-weight:600;font-size:16px;display:flex;align-items:center;gap:8px}
