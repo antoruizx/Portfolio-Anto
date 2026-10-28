@@ -43,6 +43,11 @@
   document.addEventListener('click',e=>{ if(!panel.hidden && !box.contains(e.target)) toggle(false); });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !panel.hidden){ toggle(false); btn.focus(); } });
 
+  // Fuera del español, los botones de CV bajan la versión en inglés
+  if(translated) document.querySelectorAll('a[href="cv/Nadia-Antonella-Ruiz-CV.pdf"]').forEach(l=>{
+    l.href='cv/Nadia-Antonella-Ruiz-CV-EN.pdf'; l.download='Nadia-Antonella-Ruiz-Resume.pdf';
+  });
+
   // Cargar Google Translate solo si hace falta
   if(translated){
     window.gtInit=()=>new google.translate.TranslateElement({pageLanguage:'es', autoDisplay:false}, 'gt-el');
