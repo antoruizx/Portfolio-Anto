@@ -273,6 +273,10 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,46px);let
 .cert-btn{margin-top:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px;border:1px solid var(--line-strong);background:rgba(123,92,255,.12);color:var(--fg);font:600 13.5px var(--body);cursor:pointer;transition:background .2s,border-color .2s,transform .2s;position:relative;z-index:4}
 .cert-btn:hover{background:rgba(123,92,255,.25);border-color:var(--accent-soft);transform:translateY(-1px)}
 .cert-btn svg{width:16px;height:16px}
+a.cert-btn{text-decoration:none}
+.post .cert-btn + .cert-btn{margin-left:8px}
+.proj{scroll-margin-top:96px}
+.proj:target{border-color:var(--accent-soft);box-shadow:0 0 0 3px rgba(123,92,255,.25),0 0 28px var(--glow)}
 
 /* modal de certificado */
 .cert-modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding-block:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}

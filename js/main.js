@@ -14,6 +14,7 @@
           <header><span class="type">${esc(e.tipo)}</span>${e.estado==='soon'?'<span class="soon-badge">Próximamente</span>':''}${e.estado==='now'?'<span class="soon-badge" style="color:var(--ok)">En curso</span>':''}</header>
           <h3>${esc(e.titulo)}</h3><p>${esc(e.texto)}</p>
           ${e.cert?`<button class="cert-btn" type="button" data-cert="${e.cert}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 21l4-2 4 2-1-7.5"/></svg>Ver certificación</button>`:''}
+          ${e.proyecto?`<a class="cert-btn" href="#proyecto-${e.proyecto}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>Ver caso de estudio</a>`:''}
         </article>
       </li>`).join('');
   }
@@ -34,7 +35,7 @@
   }));
 
   document.getElementById('projects').innerHTML = PROYECTOS.map(p => `
-    <article class="proj spot${p.destacado?' featured':''}">
+    <article class="proj spot${p.destacado?' featured':''}" id="proyecto-${p.id}">
       <div class="shot">${(p.imgs||[p.img]).map((s,k)=>`<img src="${s}" alt="Captura ${k+1} de ${esc(p.titulo)}" loading="lazy" class="${k===0?'on':''}">`).join('')}${(p.imgs||[]).length>1?`<div class="dots">${p.imgs.map((_,k)=>`<i class="${k===0?'on':''}"></i>`).join('')}</div>`:''}</div>
       <div class="proj-body">
         ${p.destacado?'<span class="feat-badge">Proyecto destacado</span>':''}<h3>${esc(p.titulo)}</h3><p>${esc(p.texto)}</p>
