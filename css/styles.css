@@ -238,6 +238,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,46px);let
 .case-col{display:flex;flex-direction:column;gap:16px;min-width:0}
 /* Las 3 tarjetas de la izquierda: mismo alto y juntas igual de altas que la del medio */
 .case-col-left{display:grid;grid-auto-rows:1fr}
+.case-col-left .case-item{display:grid;grid-template-columns:auto 1fr;align-content:center;align-items:start}
 .case-item{display:flex;gap:16px;align-items:flex-start;padding:22px}
 .case-item h3{margin:0 0 6px;font-family:var(--display);font-weight:500;font-size:18px}
 .ico{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(123,92,255,.14);border:1px solid var(--line-strong);color:var(--accent-soft)}
