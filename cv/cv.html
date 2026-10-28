@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV · Nadia Antonella Ruiz</title>
+<!-- Fuente del PDF. Para regenerarlo: npm run cv -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page{size:A4;margin:0}
+  :root{
+    --ink:#16131F; --muted:#5E5873; --line:#E6E1F5; --paper:#FFFFFF; --tint:#F6F3FF;
+    --dark:#0A0910; --dark-2:#1A1724; --accent:#7B5CFF; --accent-soft:#B6A4FF; --lime:#D6FF4D; --ok:#2FB57E;
+    --display:"Sora",sans-serif; --body:"Manrope",sans-serif; --mono:"JetBrains Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:9.2pt;line-height:1.45}
+  .page{width:210mm;height:297mm;display:flex;flex-direction:column;overflow:hidden}
+
+  /* Cabecera: la credencial del sitio */
+  header{position:relative;background:var(--dark);color:#EEEBF7;padding:8mm 14mm 7mm;display:grid;grid-template-columns:30mm 1fr;gap:9mm;align-items:center;overflow:hidden}
+  header::before{content:"";position:absolute;width:120mm;height:120mm;right:-40mm;top:-70mm;background:radial-gradient(circle,rgba(123,92,255,.55),transparent 65%)}
+  header::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(176,156,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(176,156,255,.06) 1px,transparent 1px);background-size:8mm 8mm}
+  .badge{position:relative;z-index:1;background:linear-gradient(160deg,#2A2140,var(--dark-2));border:1px solid rgba(182,164,255,.45);border-radius:4mm;padding:3mm;box-shadow:0 0 10mm rgba(123,92,255,.35)}
+  .badge .top{display:flex;justify-content:space-between;align-items:center;font:500 5.5pt var(--mono);letter-spacing:.12em;color:var(--accent-soft);margin-bottom:2mm}
+  .badge .chip{width:5mm;height:3.6mm;border-radius:1mm;background:linear-gradient(135deg,var(--accent-soft),var(--accent))}
+  .badge img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:2.5mm}
+  .badge .mrz{margin-top:2mm;font:500 4.6pt var(--mono);letter-spacing:.1em;color:rgba(238,235,247,.45);white-space:nowrap;overflow:hidden}
+  .head{position:relative;z-index:1}
+  .kicker{font:500 7pt var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft)}
+  .kicker .dot{display:inline-block;width:1.6mm;height:1.6mm;border-radius:50%;background:#6FE3B2;margin-right:1.6mm;vertical-align:middle}
+  h1{font-family:var(--display);font-weight:500;font-size:24pt;line-height:1.05;letter-spacing:-.03em;margin:2mm 0 1mm}
+  h1 span{color:var(--accent-soft)}
+  .role{font:600 10pt var(--body);color:#D9D2FF}
+  .contact{display:flex;flex-wrap:wrap;gap:1.4mm 5mm;margin-top:3.6mm;font:500 7.6pt var(--mono);color:#CFC8E8}
+  .contact a{color:inherit;text-decoration:none}
+  .contact b{color:var(--accent-soft);font-weight:500;margin-right:1.2mm}
+
+  /* Cuerpo */
+  main{flex:1;display:grid;grid-template-columns:1fr 70mm;min-height:0}
+  .col{padding:6.5mm 8mm 5mm 13mm}
+  aside{background:var(--tint);border-left:1px solid var(--line);padding:6.5mm 11mm 5mm 7mm}
+  section{margin-bottom:4.6mm}
+  h2{display:flex;align-items:center;gap:2.5mm;font:600 7.4pt var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:2.4mm}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  aside h2::after{background:#DCD4F7}
+  p.about{color:var(--muted);font-size:9pt}
+  p.about strong{color:var(--ink);font-weight:600}
+
+  .tl{position:relative;padding-left:5mm}
+  .tl::before{content:"";position:absolute;left:1mm;top:1.5mm;bottom:1.5mm;width:1px;background:linear-gradient(var(--accent),var(--line))}
+  .item{position:relative;margin-bottom:2.6mm}
+  .item:last-child{margin-bottom:0}
+  .item::before{content:"";position:absolute;left:-5mm;top:1.3mm;width:2mm;height:2mm;border-radius:50%;background:var(--paper);border:1.5px solid var(--accent)}
+  .item.now::before{background:var(--accent)}
+  .item .row{display:flex;justify-content:space-between;gap:3mm;align-items:baseline}
+  .item h3{font-family:var(--display);font-weight:600;font-size:9.6pt;line-height:1.3;letter-spacing:-.01em}
+  .item .when{font:500 7pt var(--mono);color:var(--muted);white-space:nowrap}
+  .item .org{font-weight:600;font-size:8.4pt;color:var(--accent)}
+  .item p{color:var(--muted);font-size:8.4pt;line-height:1.42;margin-top:.4mm}
+  aside .item h3{font-size:9pt}
+
+  .projects{display:grid;grid-template-columns:1fr 1fr;gap:2.2mm}
+  .proj{border:1px solid var(--line);border-radius:2.5mm;padding:2.2mm 2.8mm}
+  .proj.feat{grid-column:1 / -1;background:linear-gradient(120deg,#F3EFFF,#FFFFFF);border-color:#D5CBFA}
+  .proj .row{display:flex;justify-content:space-between;align-items:baseline;gap:2mm}
+  .proj h3{font-family:var(--display);font-weight:600;font-size:9.4pt}
+  .proj .yr{font:500 6.8pt var(--mono);color:var(--muted)}
+  .proj p{color:var(--muted);font-size:7.9pt;line-height:1.38;margin-top:.5mm}
+  .proj .stack{font:500 6.6pt var(--mono);color:var(--accent);margin-top:1mm;letter-spacing:.02em}
+  .feat-tag{font:600 6pt var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#4A6B00;background:var(--lime);padding:.4mm 1.6mm;border-radius:5mm;margin-left:1.5mm;vertical-align:middle}
+
+  .group{margin-bottom:2.4mm}
+  .group:last-child{margin-bottom:0}
+  .group h4{font:600 6.8pt var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4mm}
+  .tags{display:flex;flex-wrap:wrap;gap:1mm}
+  .tag{font:500 6.6pt var(--mono);padding:.5mm 1.6mm;border-radius:1.4mm;background:#fff;border:1px solid #DCD4F7;color:var(--ink)}
+  .list{list-style:none}
+  .list li{margin-bottom:1.8mm}
+  .list li:last-child{margin-bottom:0}
+  .list b{display:block;font-family:var(--display);font-weight:600;font-size:8.8pt;line-height:1.3}
+  .list span{font-size:7.8pt;color:var(--muted)}
+  .lang{display:flex;justify-content:space-between;font-size:8.6pt;margin-bottom:1.4mm}
+  .lang span{font:500 7pt var(--mono);color:var(--muted)}
+  .bar{height:1.2mm;border-radius:1mm;background:#E2DBFA;margin-bottom:2.6mm;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-soft))}
+
+  footer{background:var(--dark);color:rgba(238,235,247,.5);font:500 6.6pt var(--mono);letter-spacing:.14em;padding:2.6mm 14mm;display:flex;justify-content:space-between}
+  footer a{color:var(--accent-soft);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="badge">
+      <div class="top"><span class="chip"></span><span>DEV-2026</span></div>
+      <img src="../img/anto.jpg" alt="Foto de Nadia Antonella Ruiz">
+      <div class="mrz">DEV&lt;ARG&lt;RUIZ&lt;&lt;NADIA&lt;ANTONELLA&lt;&lt;&lt;</div>
+    </div>
+    <div class="head">
+      <p class="kicker"><span class="dot"></span>Disponible para proyectos</p>
+      <h1>Nadia Antonella <span>Ruiz</span></h1>
+      <p class="role">Full Stack Web Developer · AWS DevOps</p>
+      <div class="contact">
+        <span><b>@</b><a href="mailto:antoruizx@gmail.com">antoruizx@gmail.com</a></span>
+        <span><b>tel</b>+54 381 498-8682</span>
+        <span><b>gh</b><a href="https://github.com/antoruizx">github.com/antoruizx</a></span>
+        <span><b>in</b><a href="https://www.linkedin.com/in/antoruizx">linkedin.com/in/antoruizx</a></span>
+        <span><b>web</b><a href="https://portfolio-anto.vercel.app/">portfolio-anto.vercel.app</a></span>
+        <span><b>loc</b>Tucumán, Argentina</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="col">
+      <section>
+        <h2>Perfil</h2>
+        <p class="about">Programadora Full Stack con base en diseño. Construyo <strong>sistemas de gestión, páginas web y apps para negocios</strong>, desde la base de datos hasta la interfaz, cuidando que sean sólidos por dentro y claros por fuera. Me gusta entender lo que necesita cada cliente, trabajar en equipo y llevar los proyectos de la idea al lanzamiento.</p>
+      </section>
+
+      <section>
+        <h2>Proyectos destacados</h2>
+        <div class="projects">
+          <div class="proj feat">
+            <div class="row"><h3>ARsuma <span class="feat-tag">Destacado</span></h3><span class="yr">2026 · arsuma.com.ar</span></div>
+            <p>Red de puntos y premios para comercios de Tucumán, impulsada por la Federación Económica de Tucumán. Los clientes suman puntos con QR y canjean premios; cada comercio tiene su panel y la Federación ve las métricas de toda la red.</p>
+            <p class="stack">Puntos con QR · Multi-comercio · Panel de métricas · Informes en Excel</p>
+          </div>
+          <div class="proj">
+            <div class="row"><h3>Foja</h3><span class="yr">2026</span></div>
+            <p>Sistema de gestión para estudios jurídicos: clientes, casos, tareas y login con tokens.</p>
+            <p class="stack">ASP.NET Core · EF Core · PostgreSQL · React</p>
+          </div>
+          <div class="proj">
+            <div class="row"><h3>Ruiz &amp; Associates</h3><span class="yr">2024</span></div>
+            <p>Landing para una firma contable, con formulario que envía las consultas directo al correo.</p>
+            <p class="stack">TypeScript · CSS · Responsive</p>
+          </div>
+          <div class="proj">
+            <div class="row"><h3>Piaceres</h3><span class="yr">2024</span></div>
+            <p>Sitio de varias páginas para un restaurante, con menú, servicios y contacto.</p>
+            <p class="stack">HTML · CSS · JavaScript</p>
+          </div>
+          <div class="proj">
+            <div class="row"><h3>Reed</h3><span class="yr">2023</span></div>
+            <p>Catálogo de productos dinámico con registro, inicio de sesión y seguridad con tokens.</p>
+            <p class="stack">React · Vite · JavaScript</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experiencia</h2>
+        <div class="tl">
+          <div class="item now">
+            <div class="row"><h3>Desarrolladora Full Stack</h3><span class="when">2023 — Actualidad</span></div>
+            <p class="org">Independiente</p>
+            <p>Desarrollo de sistemas y sitios para negocios: relevamiento con el cliente, diseño, frontend, backend, base de datos y puesta en producción.</p>
+          </div>
+          <div class="item">
+            <div class="row"><h3>Hostess Promoter</h3><span class="when">Feb — May 2025</span></div>
+            <p class="org">Shibari Tulum · México</p>
+            <p>Venta de experiencias DayPass en un hotel 5 estrellas, con atención al cliente principalmente en inglés.</p>
+          </div>
+          <div class="item">
+            <div class="row"><h3>Diseñadora web y gestora de contenido</h3><span class="when">Mar 2023 — Dic 2024</span></div>
+            <p class="org">B2B Marketing</p>
+            <p>Diseño y gestión de sitios de clientes con eDirectory CMS: plantillas adaptadas a cada marca, contenido optimizado para SEO y trabajo directo con los clientes.</p>
+          </div>
+          <div class="item">
+            <div class="row"><h3>Diseño y gestión de redes sociales</h3><span class="when">Ago 2022 — Actualidad</span></div>
+            <p class="org">Freelance</p>
+            <p>Logos, piezas gráficas, videos y contenido para redes; venta y coordinación de landing pages y sitios web, de la idea al lanzamiento.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2>Formación</h2>
+        <div class="tl">
+          <div class="item now">
+            <h3>Tecnicatura Universitaria en Programación</h3>
+            <p class="org">UTN · Facultad Regional Tucumán</p>
+            <span class="when">2024 — Actualidad · último año</span>
+          </div>
+          <div class="item">
+            <h3>Bachiller en Humanidades y Ciencias Sociales</h3>
+            <p class="org">Juvenil Instituto Moderno</p>
+            <span class="when">2010 — 2015</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certificaciones</h2>
+        <ul class="list">
+          <li><b>Carrera DevOps (AWS)</b><span>Desafío Latam · Globant · 2025</span></li>
+          <li><b>Full Stack Web Developer</b><span>UTN · FRT · 2023</span></li>
+          <li><b>Formulación y Gestión de Proyectos</b><span>Universidad Tecnológica Nacional</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tecnologías</h2>
+        <div class="group"><h4>Frontend</h4><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Sass</span></div></div>
+        <div class="group"><h4>Backend y datos</h4><div class="tags"><span class="tag">C# · ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Firebase</span></div></div>
+        <div class="group"><h4>Cloud y DevOps</h4><div class="tags"><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">Railway</span></div></div>
+        <div class="group"><h4>Diseño y gestión</h4><div class="tags"><span class="tag">Figma</span><span class="tag">Illustrator</span><span class="tag">Photoshop</span><span class="tag">Notion</span><span class="tag">Jira</span><span class="tag">Trello</span></div></div>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <div class="lang">Español<span>Nativo</span></div><div class="bar"><i style="width:100%"></i></div>
+        <div class="lang">Inglés<span>Intermedio · B1</span></div><div class="bar"><i style="width:55%"></i></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer><span>NADIA ANTONELLA RUIZ · CV 2026</span><a href="https://portfolio-anto.vercel.app/">PORTFOLIO-ANTO.VERCEL.APP ↗</a></footer>
+</div>
+</body>
+</html>

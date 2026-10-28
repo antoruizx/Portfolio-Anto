@@ -1,6 +1,12 @@
 /* Interacciones del portafolio. El contenido está en data.js */
 (function(){
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Con la página traducida no se animan letras: los efectos reescriben el texto en español.
+  const fixedText = reduce || window.SITE_TRANSLATED;
+
+  // En pantallas grandes la página usa CSS zoom: las medidas del navegador vienen en px de pantalla
+  // y hay que dividirlas por este factor antes de volver a escribirlas en CSS/SVG.
+  const Z = () => { const w=document.body.offsetWidth; return w ? document.body.getBoundingClientRect().width/w : 1; };
 
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -39,7 +45,7 @@
       <div class="shot">${(p.imgs||[p.img]).map((s,k)=>`<img src="${s}" alt="Captura ${k+1} de ${esc(p.titulo)}" loading="lazy" class="${k===0?'on':''}">`).join('')}${(p.imgs||[]).length>1?`<div class="dots">${p.imgs.map((_,k)=>`<i class="${k===0?'on':''}"></i>`).join('')}</div>`:''}</div>
       <div class="proj-body">
         ${p.destacado?'<span class="feat-badge">Proyecto destacado</span>':''}<h3>${esc(p.titulo)}</h3><p>${esc(p.texto)}</p>
-        <div class="proj-foot"><div class="stackgrid">${p.stack.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+        <div class="proj-foot"><div class="stackgrid notranslate" translate="no">${p.stack.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
         <span style="display:flex;gap:16px;flex-wrap:wrap">${p.caso?'<a class="go" href="#caso-foja">Caso de estudio ↓</a>':''}<a class="go" href="${p.link}" target="_blank" rel="noopener">Ver proyecto ↗</a></span></div>
       </div>
     </article>`).join('');
@@ -48,7 +54,7 @@
   /* ---------- texto rotativo ---------- */
   const words = ["sistemas","páginas web","apps para negocios","experiencias"];
   const rotor = document.getElementById('rotor');
-  if(!reduce){
+  if(!fixedText){
     let i=0;
     setInterval(()=>{
       i=(i+1)%words.length;
@@ -94,8 +100,8 @@
     flip.querySelectorAll('.face').forEach(f=>{f.style.setProperty('--gx',gx+'%');f.style.setProperty('--gy',gy+'%');f.style.setProperty('--ang',(200+cx*6)+'deg')});
 
     // cinta: del borde superior al gancho
-    const sr=stage.getBoundingClientRect(), cr=clasp.getBoundingClientRect();
-    const ax=sr.width/2, ay=-120, px=cr.left+cr.width/2-sr.left, py=cr.top-sr.top+4;
+    const z=Z(), sr=stage.getBoundingClientRect(), cr=clasp.getBoundingClientRect();
+    const ax=sr.width/2/z, ay=-120, px=(cr.left+cr.width/2-sr.left)/z, py=(cr.top-sr.top)/z+4;
     const mx=(ax+px)/2 - vx*3, my=(ay+py)/2 + 10;
     const d=`M ${ax.toFixed(1)} ${ay} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${px.toFixed(1)} ${py.toFixed(1)}`;
     strapLayers.forEach(l=>l.setAttribute('d',d));
@@ -109,12 +115,12 @@
   hang.addEventListener('pointerdown',e=>{
     if(e.button!==undefined && e.button!==0) return;
     drag=!reduce; downAt={x:e.clientX,y:e.clientY}; moved=0;
-    ptr={x:e.clientX,y:e.clientY}; grab={x:e.clientX-hx,y:e.clientY-hy};
+    const z=Z(); ptr={x:e.clientX/z,y:e.clientY/z}; grab={x:ptr.x-hx,y:ptr.y-hy};
     hang.classList.add('dragging'); try{hang.setPointerCapture(e.pointerId)}catch(_){}
   });
   hang.addEventListener('pointermove',e=>{
     if(!downAt) return;
-    ptr={x:e.clientX,y:e.clientY};
+    const z=Z(); ptr={x:e.clientX/z,y:e.clientY/z};
     moved=Math.max(moved,Math.hypot(e.clientX-downAt.x,e.clientY-downAt.y));
   });
   const release=e=>{
@@ -162,8 +168,8 @@
   document.querySelectorAll('.tile').forEach(t=>t.classList.add('spot'));
   document.addEventListener('pointermove',e=>{
     const el=e.target.closest && e.target.closest('.spot'); if(!el) return;
-    const r=el.getBoundingClientRect();
-    el.style.setProperty('--mx',(e.clientX-r.left)+'px'); el.style.setProperty('--my',(e.clientY-r.top)+'px');
+    const r=el.getBoundingClientRect(), z=Z();
+    el.style.setProperty('--mx',(e.clientX-r.left)/z+'px'); el.style.setProperty('--my',(e.clientY-r.top)/z+'px');
   },{passive:true});
 
   /* ---------- inclinación 3D en tarjetas de "Ahora" y del caso ---------- */
@@ -177,13 +183,13 @@
 
   /* ---------- botones magnéticos ---------- */
   if(!reduce && matchMedia('(hover: hover)').matches) document.querySelectorAll('.btn').forEach(b=>{
-    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();
-      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`;});
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect(), z=Z();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18/z}px,${(e.clientY-r.top-r.height/2)*.28/z}px)`;});
     b.addEventListener('pointerleave',()=>b.style.transform='');
   });
 
   /* ---------- títulos que se decodifican al aparecer ---------- */
-  if(!reduce && 'IntersectionObserver' in window){
+  if(!fixedText && 'IntersectionObserver' in window){
     const glyphs='▓▒░<>/#*_01';
     const io=new IntersectionObserver(es=>es.forEach(en=>{
       if(!en.isIntersecting) return; io.unobserve(en.target);

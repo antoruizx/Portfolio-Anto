@@ -4,7 +4,8 @@
   "private": true,
   "description": "Portafolio de Nadia Antonella Ruiz",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "cv": "node cv/generar-pdf.js"
   },
   "engines": {
     "node": ">=18"
