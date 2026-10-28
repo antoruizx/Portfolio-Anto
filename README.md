@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Portafolio · Nadia Antonella Ruiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portafolio personal de programadora Full Stack: credencial 3D interactiva, bitácora de novedades, proyectos, caso de estudio de Foja y certificaciones.
 
-## Available Scripts
+Está hecho con HTML, CSS y JavaScript, sin dependencias ni paso de compilación.
 
-In the project directory, you can run:
+## Estructura
 
-### `npm start`
+```
+index.html            estructura de la página
+css/styles.css        estilos y animaciones
+js/data.js            CONTENIDO: bitácora, certificados y proyectos
+js/main.js            interacciones (credencial, carruseles, efectos)
+img/anto.jpg          foto de la credencial
+img/proyectos/        capturas de cada proyecto
+img/certificados/     imágenes de los certificados
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Cómo verlo en tu compu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Abrí la carpeta en VS Code y usá la extensión **Live Server** (clic derecho en `index.html` → *Open with Live Server*). También funciona con doble clic en `index.html`.
 
-### `npm test`
+## Cómo editar el contenido
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Todo el contenido que cambia seguido está en `js/data.js`.
 
-### `npm run build`
+**Sumar una novedad a la bitácora:** agregá una línea arriba de todo en `BITACORA`:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+{ fecha:"Nov 2026", tipo:"Evento", titulo:"Presentamos Polaris en la FAPPE", texto:"Contá acá cómo fue." },
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `tipo` puede ser `"Proyecto"`, `"Formación"` o `"Evento"` (son los filtros).
+- `estado:"soon"` muestra *Próximamente*; `estado:"now"` muestra *En curso*.
+- `cert:"fullstack"` agrega el botón *Ver certificación* (usa una clave de `CERTS`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Sumar un certificado:** guardá la imagen en `img/certificados/` y agregalo en `CERTS`:
 
-### `npm run eject`
+```js
+nuevo: { titulo:"Nombre del curso", org:"Institución · horas", anio:"2026",
+  paginas:["Certificado"], imgs:["img/certificados/nuevo-1.jpg"] },
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Sumar un proyecto:** guardá las capturas en `img/proyectos/` y agregalo en `PROYECTOS`. Con varias imágenes en `imgs`, se pasan solas al pasar el mouse. `destacado:true` lo muestra a todo el ancho.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Publicarlo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+No necesita compilación. En Vercel o Netlify:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Framework / preset:** Other (ninguno)
+- **Build command:** vacío
+- **Output / publish directory:** `.` (la raíz del repo)
