@@ -45,8 +45,5 @@ nuevo: { titulo:"Nombre del curso", org:"Institución · horas", anio:"2026",
 
 ## Publicarlo
 
-No necesita compilación. En Vercel o Netlify:
-
-- **Framework / preset:** Other (ninguno)
-- **Build command:** vacío
-- **Output / publish directory:** `.` (la raíz del repo)
+El repo ya trae la configuración para Vercel (`vercel.json`) y Netlify (`netlify.toml`).
+`npm run build` copia el sitio a `dist/`, que es lo que se publica. No hay dependencias que instalar.
