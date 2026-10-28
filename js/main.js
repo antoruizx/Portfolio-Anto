@@ -25,8 +25,12 @@
       </li>`).join('');
   }
   function updateLog(){
-    const mark=innerHeight*0.62, r=log.getBoundingClientRect();
-    log.style.setProperty('--fill', Math.max(0,Math.min(r.height-20, mark-r.top-10))+'px');
+    // Medidas en px de pantalla; se pasan a px CSS dividiendo por Z() (zoom en pantallas grandes)
+    const z=Z(), mark=innerHeight*0.62, r=log.getBoundingClientRect();
+    const last=log.querySelector('.entry:last-child .post');
+    const end=last ? (last.getBoundingClientRect().bottom-r.top)/z - 10 : 0;   // la línea arranca en top:10px
+    log.style.setProperty('--end', Math.max(0,end)+'px');
+    log.style.setProperty('--fill', Math.max(0,Math.min(end, (mark-r.top)/z-10))+'px');
     log.querySelectorAll('.entry').forEach(e=>{
       const n=e.querySelector('.node').getBoundingClientRect();
       e.classList.toggle('lit', n.top+5 < mark);

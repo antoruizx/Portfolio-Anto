@@ -181,7 +181,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,46px);let
 .filter{font-family:var(--body);font-size:14px;font-weight:600;padding:9px 15px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .2s}
 .filter[aria-pressed="true"]{color:var(--fg);border-color:var(--accent);background:rgba(123,92,255,.16)}
 .log{list-style:none;margin:0;padding:0;position:relative}
-.log::before{content:"";position:absolute;left:111px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--line-strong),var(--line) 85%,transparent)}
+.log::before{content:"";position:absolute;left:111px;top:10px;height:var(--end,calc(100% - 22px));width:1px;background:linear-gradient(var(--line-strong),var(--line) 85%,transparent)}
 .log::after{content:"";position:absolute;left:111px;top:10px;width:2px;margin-left:-.5px;height:var(--fill,0px);border-radius:2px;background:linear-gradient(var(--accent-soft),var(--accent));box-shadow:0 0 14px var(--glow);pointer-events:none}
 .entry .node{transition:background .4s,border-color .4s,box-shadow .4s}
 .entry .post{transition:border-color .4s,transform .2s}
