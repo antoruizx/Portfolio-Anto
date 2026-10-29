@@ -39,8 +39,9 @@ const PROYECTOS = [
     texto:"Sistema de gestión para estudios jurídicos: clientes, casos, seguimiento de tareas y login con tokens. Frontend y backend propios.", stack:["ASP.NET Core","EF Core","PostgreSQL","React"] },
   { id:"ruiz-associates", titulo:"Ruiz & Associates", img:"img/proyectos/ruiz-associates-1.jpg", link:"https://ruizxasociados.vercel.app/",
     texto:"Landing para una firma contable, con formulario que envía los datos del cliente directo al correo.", stack:["TypeScript","CSS","Responsive"] },
-  { id:"reed", titulo:"Reed", img:"img/proyectos/reed-1.jpg", link:"https://reed-project-gilt.vercel.app/",
-    texto:"Catálogo de productos dinámico con registro, inicio de sesión y seguridad basada en tokens.", stack:["React","Vite","JavaScript"] },
+  { id:"reed", titulo:"Reed", img:"img/proyectos/reed-2026.jpg", link:"https://reed-project-gilt.vercel.app/",
+    texto:"Tienda online de ropa unisex con pago por Mercado Pago o transferencia, envío por zonas y seguimiento del pedido. Tiene un diseñador de remeras donde ves la prenda con tu diseño (de Reed, propio o creado con IA) y el precio al instante, packs para revendedores y un panel para manejar productos, stock y pedidos.",
+    stack:["React","Express","MongoDB","Mercado Pago"] },
   { id:"piaceres", titulo:"Piaceres", img:"img/proyectos/piaceres-1.jpg", link:"https://piaceres-resto.vercel.app/",
     texto:"Sitio de varias páginas para un restaurante, con menú, servicios y contacto.", stack:["HTML","CSS","JavaScript"] }
 ];
