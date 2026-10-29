@@ -54,26 +54,30 @@
       </div>
     </article>`).join('');
 
-  /* ---------- texto rotativo ---------- */
+  /* ---------- texto rotativo: un haz láser borra la palabra y revela la siguiente ---------- */
   const words = ["sistemas","páginas web","apps para negocios","experiencias"];
   const rotor = document.getElementById('rotor');
   if(!fixedText){
-    let i=0;
-    setInterval(()=>{
-      i=(i+1)%words.length;
-      const target=words[i]; let n=0;
-      const chars="▓▒░<>/#*";
-      const t=setInterval(()=>{
-        n++;
-        rotor.textContent = target.split('').map((c,k)=> k<n-3 ? c : (c===' '?' ':chars[(Math.random()*chars.length)|0])).join('');
-        if(n>target.length+3){clearInterval(t);rotor.textContent=target;}
-      },38);
-    },2800);
+    rotor.classList.add('laser'); rotor.innerHTML='<span class="rw"></span>';
+    const rw=rotor.firstChild; rw.textContent=words[0];
+    let i=0, timer=null;
+    const play=(cls)=>{ rotor.classList.remove('l-out','l-in'); void rotor.offsetWidth; rotor.classList.add(cls); };
+    const step=()=>{
+      // Con la pestaña oculta no se avanza; se retoma al volver (visibilitychange)
+      if(document.hidden){ timer=null; return; }
+      play('l-out');
+      timer=setTimeout(()=>{
+        i=(i+1)%words.length; rw.textContent=words[i]; play('l-in');
+        timer=setTimeout(step,2000);
+      },190);
+    };
+    timer=setTimeout(step,2000);
+    document.addEventListener('visibilitychange',()=>{ if(!document.hidden && !timer) timer=setTimeout(step,400); });
   }
 
   /* ---------- credencial colgante: física de resorte + inclinación 3D ---------- */
   const stage=document.getElementById('stage'), hang=document.getElementById('hang'), tilt=document.getElementById('tilt'), flip=document.getElementById('flip');
-  const clasp=document.getElementById('clasp'), strapLayers=[...document.querySelectorAll('#strap .sp')], strapSheen=document.getElementById('strapSheen'); let sheenOff=0;
+  const faces=[...flip.querySelectorAll('.face')], clasp=document.getElementById('clasp'), strapLayers=[...document.querySelectorAll('#strap .sp')], strapSheen=document.getElementById('strapSheen'); let sheenOff=0;
   let tx=0,ty=0,cx=0,cy=0,gx=50,gy=20,hover=false,t0=performance.now();
   let hx=0, hy=reduce?0:-140, vx=0, vy=0, rot=0, drag=false, grab={x:0,y:0}, ptr={x:0,y:0}, downAt=null, moved=0;
   const soft=(v,m)=>m*Math.tanh(v/m), clamp=(v,a)=>Math.max(-a,Math.min(a,v));
@@ -100,20 +104,44 @@
     }
     cx+=(tx-cx)*.1; cy+=(ty-cy)*.1;
     tilt.style.transform=`rotateY(${cx.toFixed(2)}deg) rotateX(${cy.toFixed(2)}deg)`;
-    flip.querySelectorAll('.face').forEach(f=>{f.style.setProperty('--gx',gx+'%');f.style.setProperty('--gy',gy+'%');f.style.setProperty('--ang',(200+cx*6)+'deg')});
+    faces.forEach(f=>{f.style.setProperty('--gx',gx+'%');f.style.setProperty('--gy',gy+'%');f.style.setProperty('--ang',(200+cx*6)+'deg')});
 
-    // cinta: del borde superior al gancho
-    const z=Z(), sr=stage.getBoundingClientRect(), cr=clasp.getBoundingClientRect();
-    const ax=sr.width/2/z, ay=-120, px=(cr.left+cr.width/2-sr.left)/z, py=(cr.top-sr.top)/z+4;
+    // cinta: del borde superior al gancho. El gancho está 30px arriba del pivote de la credencial,
+    // así que su posición se calcula con hx/hy/rot en vez de medir el DOM en cada cuadro.
+    const rr=rot/57.3, ax=geo.ax, ay=-120, px=geo.px+hx+30*Math.sin(rr), py=geo.py+hy-30*Math.cos(rr)+4;
     const mx=(ax+px)/2 - vx*3, my=(ay+py)/2 + 10;
     const d=`M ${ax.toFixed(1)} ${ay} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${px.toFixed(1)} ${py.toFixed(1)}`;
     strapLayers.forEach(l=>l.setAttribute('d',d));
     if(!reduce){ sheenOff-= 1.6+Math.min(14,Math.hypot(vx,vy)*1.4); strapSheen.setAttribute('stroke-dashoffset',sheenOff.toFixed(1)); }
-    if(!reduce) requestAnimationFrame(frame);
+    raf = (!reduce && running()) ? requestAnimationFrame(frame) : 0;
   }
+  // Medidas fijas del escenario (pivote de la credencial sin transformar), en px CSS
+  const geo={ax:0,px:0,py:0};
+  function measure(){
+    const z=Z(), keep=hang.style.transform; hang.style.transform='none';
+    const sr=stage.getBoundingClientRect(), hr=hang.getBoundingClientRect();
+    hang.style.transform=keep;
+    geo.ax=sr.width/2/z; geo.px=(hr.left+hr.width/2-sr.left)/z; geo.py=(hr.top-sr.top)/z;
+  }
+  measure();
+  if('ResizeObserver' in window) new ResizeObserver(()=>{measure(); if(reduce) frame(performance.now());}).observe(stage);
+  addEventListener('resize',()=>{measure(); if(reduce) requestAnimationFrame(frame);});
+
+  // La animación sólo corre con la pestaña visible y la credencial en pantalla.
+  // Al volver se retoma desde donde quedó, sin saltos acumulados.
+  let raf=0, onScreen=true, hiddenAt=0;
+  const running=()=>onScreen && !document.hidden;
+  function resume(){ if(!reduce && !raf && running()) raf=requestAnimationFrame(frame); }
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){ hiddenAt=performance.now(); if(raf){cancelAnimationFrame(raf);raf=0;} drag=false; downAt=null; hang.classList.remove('dragging'); }
+    else { if(hiddenAt) t0+=performance.now()-hiddenAt; hiddenAt=0; resume(); }
+  });
+  if('IntersectionObserver' in window) new IntersectionObserver(([en])=>{
+    onScreen=en.isIntersecting; if(onScreen) resume(); else if(raf){cancelAnimationFrame(raf);raf=0;}
+  }).observe(stage);
+
   if(!reduce){ tilt.classList.add('building'); setTimeout(()=>tilt.classList.remove('building'),2100); }
-  requestAnimationFrame(frame);
-  if(reduce) addEventListener('resize',()=>requestAnimationFrame(frame));
+  raf=requestAnimationFrame(frame);
 
   hang.addEventListener('pointerdown',e=>{
     if(e.button!==undefined && e.button!==0) return;
@@ -191,18 +219,18 @@
     b.addEventListener('pointerleave',()=>b.style.transform='');
   });
 
-  /* ---------- títulos que se decodifican al aparecer ---------- */
+  /* ---------- títulos que aparecen con el barrido láser ---------- */
   if(!fixedText && 'IntersectionObserver' in window){
-    const glyphs='▓▒░<>/#*_01';
     const io=new IntersectionObserver(es=>es.forEach(en=>{
       if(!en.isIntersecting) return; io.unobserve(en.target);
-      const el=en.target, txt=el.textContent; let n=0;
-      const t=setInterval(()=>{ n+=1.4;
-        el.textContent=txt.split('').map((c,k)=>k<n||c===' '?c:glyphs[(Math.random()*glyphs.length)|0]).join('');
-        if(n>=txt.length){clearInterval(t);el.textContent=txt;}
-      },22);
+      const l=en.target.querySelector('.laser'); l.classList.remove('pre'); l.classList.add('l-in');
     }),{threshold:.6});
-    document.querySelectorAll('section h2').forEach(h=>io.observe(h));
+    document.querySelectorAll('section h2').forEach(h=>{
+      const l=document.createElement('span'); l.className='laser pre';
+      const rw=document.createElement('span'); rw.className='rw';
+      rw.append(...h.childNodes); l.append(rw); h.append(l);
+      io.observe(h);
+    });
   }
 
   /* ---------- modal de certificación 3D ---------- */
