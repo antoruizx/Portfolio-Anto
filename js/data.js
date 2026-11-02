@@ -37,7 +37,7 @@ const PROYECTOS = [
     stack:["Puntos con QR","Multi-comercio","Panel de la red","Informes en Excel"] },
   { id:"foja", titulo:"Foja", caso:true, imgs:["img/proyectos/foja-1.jpg","img/proyectos/foja-2.jpg"], link:"https://foja-juridica.netlify.app/",
     texto:"Sistema de gestión para estudios jurídicos: clientes, casos, seguimiento de tareas y login con tokens. Frontend y backend propios.", stack:["ASP.NET Core","EF Core","PostgreSQL","React"] },
-  { id:"morandi", titulo:"Morandi & Asociados", caso:true, img:"img/proyectos/morandi-1.jpg", link:"https://ruizxasociados.vercel.app/",
+  { id:"morandi", titulo:"Morandi & Asociados", caso:true, img:"img/proyectos/morandi-1.jpg", link:"https://morandi-asoc.vercel.app/",
     texto:"Landing page para estudios jurídicos: áreas de práctica, equipo, preguntas frecuentes y un formulario que arma la consulta y la envía por WhatsApp o mail. Disponible en español, inglés y portugués.", stack:["React","TypeScript","Tailwind CSS","Vite"] },
   { id:"reed", titulo:"Reed", img:"img/proyectos/reed-2026.jpg", link:"https://reed-project-gilt.vercel.app/",
     texto:"Tienda online de ropa unisex con pago por Mercado Pago o transferencia, envío por zonas y seguimiento del pedido. Tiene un diseñador de remeras donde ves la prenda con tu diseño (de Reed, propio o creado con IA) y el precio al instante, packs para revendedores y un panel para manejar productos, stock y pedidos.",
