@@ -50,7 +50,7 @@
       <div class="proj-body">
         ${p.destacado?'<span class="feat-badge">Proyecto destacado</span>':''}<h3>${esc(p.titulo)}</h3><p>${esc(p.texto)}</p>
         <div class="proj-foot"><div class="stackgrid notranslate" translate="no">${p.stack.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
-        <span style="display:flex;gap:16px;flex-wrap:wrap">${p.caso?'<a class="go" href="#caso-foja">Caso de estudio ↓</a>':''}<a class="go" href="${p.link}" target="_blank" rel="noopener">Ver proyecto ↗</a></span></div>
+        <span style="display:flex;gap:16px;flex-wrap:wrap">${p.caso?'<a class="go" href="#caso-${p.id}">Caso de estudio ↓</a>':''}<a class="go" href="${p.link}" target="_blank" rel="noopener">Ver proyecto ↗</a></span></div>
       </div>
     </article>`).join('');
 
